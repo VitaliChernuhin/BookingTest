@@ -33,6 +33,7 @@
 		5FDA16BC2AA88F2A003729BA /* SF-Pro-Display-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 5FDA16BB2AA88F26003729BA /* SF-Pro-Display-Regular.otf */; };
 		5FDA16BF2AA891CA003729BA /* Fonts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FDA16BE2AA891CA003729BA /* Fonts.swift */; };
 		5FDA16C12AA896A5003729BA /* ImageViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FDA16C02AA896A5003729BA /* ImageViewModel.swift */; };
+		5FDA16C62AA8B3CE003729BA /* ImageSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FDA16C52AA8B3CE003729BA /* ImageSource.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -59,6 +60,7 @@
 		5FDA16BD2AA88FB3003729BA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5FDA16BE2AA891CA003729BA /* Fonts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Fonts.swift; sourceTree = "<group>"; };
 		5FDA16C02AA896A5003729BA /* ImageViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageViewModel.swift; sourceTree = "<group>"; };
+		5FDA16C52AA8B3CE003729BA /* ImageSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageSource.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -191,6 +193,7 @@
 			children = (
 				5FDA16922AA85E11003729BA /* ViewEvent.swift */,
 				5FDA16C02AA896A5003729BA /* ImageViewModel.swift */,
+				5FDA16C52AA8B3CE003729BA /* ImageSource.swift */,
 			);
 			path = Types;
 			sourceTree = "<group>";
@@ -325,6 +328,7 @@
 				5FDA16C12AA896A5003729BA /* ImageViewModel.swift in Sources */,
 				5FC900862AA709EB002217F0 /* BookingTestApp.swift in Sources */,
 				5FDA16992AA87C8C003729BA /* ViewModelBaseBinding.swift in Sources */,
+				5FDA16C62AA8B3CE003729BA /* ImageSource.swift in Sources */,
 				5FDA16802AA83AA8003729BA /* HotelCoordinator.swift in Sources */,
 				5FDA168B2AA84E61003729BA /* API.swift in Sources */,
 				5FDA16892AA8458C003729BA /* Hotel.swift in Sources */,
