@@ -75,9 +75,9 @@ struct HotelView<TViewModel: HotelViewModelProtocol>: View {
             }
             .padding(EdgeInsets(top: 19, leading: 16,
                                 bottom: 0, trailing: 16))
-            
+        }.onAppear {
+            viewModel.handle(event: .onAppear)
         }
-       
     }
 }
 
@@ -86,7 +86,7 @@ struct HotelView_Previews: PreviewProvider {
     
     static var viewModel: HotelViewModel = {
         let imagePlaceholder = "imagePlaceholder"
-        var viewModel = HotelViewModel()
+        var viewModel = HotelViewModel(hotelProvider: ServicesFactory.shared.service(type: HotelProviding.self))
         viewModel.imageLocalPaths.append(imagePlaceholder)
         return viewModel
     }()
