@@ -43,6 +43,12 @@ class ServicesFactory {
 private extension ServicesFactory {
     
     func registerServices() {
-        
+        registerHotelProvider()
+    }
+    
+    func registerHotelProvider() {
+        container.register(HotelProviding.self) { _ in
+            return HotelProvider()
+        }
     }
 }
