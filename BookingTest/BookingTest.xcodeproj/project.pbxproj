@@ -93,8 +93,7 @@
 				5FDA16812AA8449B003729BA /* Services */,
 				5FDA167B2AA839A0003729BA /* Scenes */,
 				5FDA16762AA83299003729BA /* Main */,
-				5FC900892AA709ED002217F0 /* Assets.xcassets */,
-				5FC9008B2AA709ED002217F0 /* Preview Content */,
+				5FDA16A12AA88A15003729BA /* Resources */,
 			);
 			path = BookingTest;
 			sourceTree = "<group>";
@@ -197,6 +196,15 @@
 				5FDA169F2AA87DE1003729BA /* ViewActionHandling.swift */,
 			);
 			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		5FDA16A12AA88A15003729BA /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				5FC9008B2AA709ED002217F0 /* Preview Content */,
+				5FC900892AA709ED002217F0 /* Assets.xcassets */,
+			);
+			path = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -425,7 +433,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"BookingTest/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"BookingTest/Resources/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -453,7 +461,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"BookingTest/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"BookingTest/Resources/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
