@@ -11,7 +11,7 @@ import SwiftUI
 struct BookingTestApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            MainCoordinator().view()
         }
     }
 }
