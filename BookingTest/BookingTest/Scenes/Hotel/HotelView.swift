@@ -7,7 +7,11 @@
 
 import SwiftUI
 
-// MARK: HotelView
+// MARK: HotelViewAction
+enum HotelViewAction {
+}
+
+// MARK: - HotelView
 struct HotelView: View {
     var body: some View {
         Text("Hotel")

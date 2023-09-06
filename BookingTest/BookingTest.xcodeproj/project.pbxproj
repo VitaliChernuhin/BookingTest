@@ -23,6 +23,9 @@
 		5FDA16892AA8458C003729BA /* Hotel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FDA16882AA8458C003729BA /* Hotel.swift */; };
 		5FDA168B2AA84E61003729BA /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FDA168A2AA84E60003729BA /* API.swift */; };
 		5FDA16902AA858FA003729BA /* MessageRepresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FDA168F2AA858FA003729BA /* MessageRepresentable.swift */; };
+		5FDA16932AA85E12003729BA /* ViewEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FDA16922AA85E11003729BA /* ViewEvent.swift */; };
+		5FDA16952AA872DC003729BA /* HotelViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FDA16942AA872DC003729BA /* HotelViewModel.swift */; };
+		5FDA16972AA873CF003729BA /* Bindable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FDA16962AA873CF003729BA /* Bindable.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +41,9 @@
 		5FDA16882AA8458C003729BA /* Hotel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Hotel.swift; sourceTree = "<group>"; };
 		5FDA168A2AA84E60003729BA /* API.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
 		5FDA168F2AA858FA003729BA /* MessageRepresentable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageRepresentable.swift; sourceTree = "<group>"; };
+		5FDA16922AA85E11003729BA /* ViewEvent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewEvent.swift; sourceTree = "<group>"; };
+		5FDA16942AA872DC003729BA /* HotelViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HotelViewModel.swift; sourceTree = "<group>"; };
+		5FDA16962AA873CF003729BA /* Bindable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bindable.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,6 +112,7 @@
 			isa = PBXGroup;
 			children = (
 				5FDA167C2AA839AF003729BA /* Hotel */,
+				5FDA167F2AA83AA8003729BA /* HotelCoordinator.swift */,
 			);
 			path = Scenes;
 			sourceTree = "<group>";
@@ -114,7 +121,7 @@
 			isa = PBXGroup;
 			children = (
 				5FDA167D2AA83A83003729BA /* HotelView.swift */,
-				5FDA167F2AA83AA8003729BA /* HotelCoordinator.swift */,
+				5FDA16942AA872DC003729BA /* HotelViewModel.swift */,
 			);
 			path = Hotel;
 			sourceTree = "<group>";
@@ -149,6 +156,7 @@
 		5FDA168D2AA858CC003729BA /* Shared */ = {
 			isa = PBXGroup;
 			children = (
+				5FDA16912AA85DF9003729BA /* Types */,
 				5FDA168E2AA858DB003729BA /* Protocols */,
 			);
 			path = Shared;
@@ -158,8 +166,17 @@
 			isa = PBXGroup;
 			children = (
 				5FDA168F2AA858FA003729BA /* MessageRepresentable.swift */,
+				5FDA16962AA873CF003729BA /* Bindable.swift */,
 			);
 			path = Protocols;
+			sourceTree = "<group>";
+		};
+		5FDA16912AA85DF9003729BA /* Types */ = {
+			isa = PBXGroup;
+			children = (
+				5FDA16922AA85E11003729BA /* ViewEvent.swift */,
+			);
+			path = Types;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -247,7 +264,10 @@
 			files = (
 				5FDA167E2AA83A83003729BA /* HotelView.swift in Sources */,
 				5FDA16832AA844BA003729BA /* ServicesFactory.swift in Sources */,
+				5FDA16972AA873CF003729BA /* Bindable.swift in Sources */,
 				5FDA16782AA832C3003729BA /* MainCoordinator.swift in Sources */,
+				5FDA16932AA85E12003729BA /* ViewEvent.swift in Sources */,
+				5FDA16952AA872DC003729BA /* HotelViewModel.swift in Sources */,
 				5FDA16852AA8455A003729BA /* HotelProvider.swift in Sources */,
 				5FDA16902AA858FA003729BA /* MessageRepresentable.swift in Sources */,
 				5FC900862AA709EB002217F0 /* BookingTestApp.swift in Sources */,
