@@ -30,6 +30,8 @@
 		5FDA169B2AA87D1D003729BA /* CancelableOwner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FDA169A2AA87D1D003729BA /* CancelableOwner.swift */; };
 		5FDA169E2AA87DC8003729BA /* ViewEventHandling.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FDA169D2AA87DC8003729BA /* ViewEventHandling.swift */; };
 		5FDA16A02AA87DE1003729BA /* ViewActionHandling.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FDA169F2AA87DE1003729BA /* ViewActionHandling.swift */; };
+		5FDA16BC2AA88F2A003729BA /* SF-Pro-Display-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 5FDA16BB2AA88F26003729BA /* SF-Pro-Display-Regular.otf */; };
+		5FDA16BF2AA891CA003729BA /* Fonts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FDA16BE2AA891CA003729BA /* Fonts.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -52,6 +54,9 @@
 		5FDA169A2AA87D1D003729BA /* CancelableOwner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CancelableOwner.swift; sourceTree = "<group>"; };
 		5FDA169D2AA87DC8003729BA /* ViewEventHandling.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewEventHandling.swift; sourceTree = "<group>"; };
 		5FDA169F2AA87DE1003729BA /* ViewActionHandling.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewActionHandling.swift; sourceTree = "<group>"; };
+		5FDA16BB2AA88F26003729BA /* SF-Pro-Display-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Pro-Display-Regular.otf"; sourceTree = "<group>"; };
+		5FDA16BD2AA88FB3003729BA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5FDA16BE2AA891CA003729BA /* Fonts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Fonts.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -165,6 +170,7 @@
 			children = (
 				5FDA16912AA85DF9003729BA /* Types */,
 				5FDA168E2AA858DB003729BA /* Protocols */,
+				5FDA16BE2AA891CA003729BA /* Fonts.swift */,
 			);
 			path = Shared;
 			sourceTree = "<group>";
@@ -201,10 +207,20 @@
 		5FDA16A12AA88A15003729BA /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				5FDA16A22AA88E8F003729BA /* Fonts */,
+				5FDA16BD2AA88FB3003729BA /* Info.plist */,
 				5FC9008B2AA709ED002217F0 /* Preview Content */,
 				5FC900892AA709ED002217F0 /* Assets.xcassets */,
 			);
 			path = Resources;
+			sourceTree = "<group>";
+		};
+		5FDA16A22AA88E8F003729BA /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				5FDA16BB2AA88F26003729BA /* SF-Pro-Display-Regular.otf */,
+			);
+			path = Fonts;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -279,6 +295,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5FC9008D2AA709ED002217F0 /* Preview Assets.xcassets in Resources */,
+				5FDA16BC2AA88F2A003729BA /* SF-Pro-Display-Regular.otf in Resources */,
 				5FC9008A2AA709ED002217F0 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -297,6 +314,7 @@
 				5FDA16972AA873CF003729BA /* Bindable.swift in Sources */,
 				5FDA16782AA832C3003729BA /* MainCoordinator.swift in Sources */,
 				5FDA169E2AA87DC8003729BA /* ViewEventHandling.swift in Sources */,
+				5FDA16BF2AA891CA003729BA /* Fonts.swift in Sources */,
 				5FDA16932AA85E12003729BA /* ViewEvent.swift in Sources */,
 				5FDA16952AA872DC003729BA /* HotelViewModel.swift in Sources */,
 				5FDA16852AA8455A003729BA /* HotelProvider.swift in Sources */,
@@ -436,11 +454,12 @@
 				DEVELOPMENT_ASSET_PATHS = "\"BookingTest/Resources/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = BookingTest/Resources/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "Booking test task";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -464,11 +483,12 @@
 				DEVELOPMENT_ASSET_PATHS = "\"BookingTest/Resources/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = BookingTest/Resources/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "Booking test task";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
