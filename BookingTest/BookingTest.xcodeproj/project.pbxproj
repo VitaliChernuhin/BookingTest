@@ -18,6 +18,7 @@
 		5FDA16782AA832C3003729BA /* MainCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FDA16772AA832C3003729BA /* MainCoordinator.swift */; };
 		5FDA167E2AA83A83003729BA /* HotelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FDA167D2AA83A83003729BA /* HotelView.swift */; };
 		5FDA16802AA83AA8003729BA /* HotelCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FDA167F2AA83AA8003729BA /* HotelCoordinator.swift */; };
+		5FDA16832AA844BA003729BA /* ServicesFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FDA16822AA844BA003729BA /* ServicesFactory.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		5FDA16772AA832C3003729BA /* MainCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCoordinator.swift; sourceTree = "<group>"; };
 		5FDA167D2AA83A83003729BA /* HotelView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HotelView.swift; sourceTree = "<group>"; };
 		5FDA167F2AA83AA8003729BA /* HotelCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HotelCoordinator.swift; sourceTree = "<group>"; };
+		5FDA16822AA844BA003729BA /* ServicesFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServicesFactory.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -65,6 +67,7 @@
 		5FC900842AA709EB002217F0 /* BookingTest */ = {
 			isa = PBXGroup;
 			children = (
+				5FDA16812AA8449B003729BA /* Services */,
 				5FDA167B2AA839A0003729BA /* Scenes */,
 				5FDA16762AA83299003729BA /* Main */,
 				5FC900892AA709ED002217F0 /* Assets.xcassets */,
@@ -105,6 +108,14 @@
 				5FDA167F2AA83AA8003729BA /* HotelCoordinator.swift */,
 			);
 			path = Hotel;
+			sourceTree = "<group>";
+		};
+		5FDA16812AA8449B003729BA /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				5FDA16822AA844BA003729BA /* ServicesFactory.swift */,
+			);
+			path = Services;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -191,6 +202,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5FDA167E2AA83A83003729BA /* HotelView.swift in Sources */,
+				5FDA16832AA844BA003729BA /* ServicesFactory.swift in Sources */,
 				5FDA16782AA832C3003729BA /* MainCoordinator.swift in Sources */,
 				5FC900862AA709EB002217F0 /* BookingTestApp.swift in Sources */,
 				5FDA16802AA83AA8003729BA /* HotelCoordinator.swift in Sources */,
