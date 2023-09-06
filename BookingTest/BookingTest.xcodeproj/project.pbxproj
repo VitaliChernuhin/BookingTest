@@ -26,6 +26,10 @@
 		5FDA16932AA85E12003729BA /* ViewEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FDA16922AA85E11003729BA /* ViewEvent.swift */; };
 		5FDA16952AA872DC003729BA /* HotelViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FDA16942AA872DC003729BA /* HotelViewModel.swift */; };
 		5FDA16972AA873CF003729BA /* Bindable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FDA16962AA873CF003729BA /* Bindable.swift */; };
+		5FDA16992AA87C8C003729BA /* ViewModelBaseBinding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FDA16982AA87C8C003729BA /* ViewModelBaseBinding.swift */; };
+		5FDA169B2AA87D1D003729BA /* CancelableOwner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FDA169A2AA87D1D003729BA /* CancelableOwner.swift */; };
+		5FDA169E2AA87DC8003729BA /* ViewEventHandling.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FDA169D2AA87DC8003729BA /* ViewEventHandling.swift */; };
+		5FDA16A02AA87DE1003729BA /* ViewActionHandling.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FDA169F2AA87DE1003729BA /* ViewActionHandling.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -44,6 +48,10 @@
 		5FDA16922AA85E11003729BA /* ViewEvent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewEvent.swift; sourceTree = "<group>"; };
 		5FDA16942AA872DC003729BA /* HotelViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HotelViewModel.swift; sourceTree = "<group>"; };
 		5FDA16962AA873CF003729BA /* Bindable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bindable.swift; sourceTree = "<group>"; };
+		5FDA16982AA87C8C003729BA /* ViewModelBaseBinding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModelBaseBinding.swift; sourceTree = "<group>"; };
+		5FDA169A2AA87D1D003729BA /* CancelableOwner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CancelableOwner.swift; sourceTree = "<group>"; };
+		5FDA169D2AA87DC8003729BA /* ViewEventHandling.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewEventHandling.swift; sourceTree = "<group>"; };
+		5FDA169F2AA87DE1003729BA /* ViewActionHandling.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewActionHandling.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -165,8 +173,8 @@
 		5FDA168E2AA858DB003729BA /* Protocols */ = {
 			isa = PBXGroup;
 			children = (
+				5FDA169C2AA87D54003729BA /* ViewModel */,
 				5FDA168F2AA858FA003729BA /* MessageRepresentable.swift */,
-				5FDA16962AA873CF003729BA /* Bindable.swift */,
 			);
 			path = Protocols;
 			sourceTree = "<group>";
@@ -177,6 +185,18 @@
 				5FDA16922AA85E11003729BA /* ViewEvent.swift */,
 			);
 			path = Types;
+			sourceTree = "<group>";
+		};
+		5FDA169C2AA87D54003729BA /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				5FDA16962AA873CF003729BA /* Bindable.swift */,
+				5FDA16982AA87C8C003729BA /* ViewModelBaseBinding.swift */,
+				5FDA169A2AA87D1D003729BA /* CancelableOwner.swift */,
+				5FDA169D2AA87DC8003729BA /* ViewEventHandling.swift */,
+				5FDA169F2AA87DE1003729BA /* ViewActionHandling.swift */,
+			);
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -263,14 +283,18 @@
 			buildActionMask = 2147483647;
 			files = (
 				5FDA167E2AA83A83003729BA /* HotelView.swift in Sources */,
+				5FDA16A02AA87DE1003729BA /* ViewActionHandling.swift in Sources */,
+				5FDA169B2AA87D1D003729BA /* CancelableOwner.swift in Sources */,
 				5FDA16832AA844BA003729BA /* ServicesFactory.swift in Sources */,
 				5FDA16972AA873CF003729BA /* Bindable.swift in Sources */,
 				5FDA16782AA832C3003729BA /* MainCoordinator.swift in Sources */,
+				5FDA169E2AA87DC8003729BA /* ViewEventHandling.swift in Sources */,
 				5FDA16932AA85E12003729BA /* ViewEvent.swift in Sources */,
 				5FDA16952AA872DC003729BA /* HotelViewModel.swift in Sources */,
 				5FDA16852AA8455A003729BA /* HotelProvider.swift in Sources */,
 				5FDA16902AA858FA003729BA /* MessageRepresentable.swift in Sources */,
 				5FC900862AA709EB002217F0 /* BookingTestApp.swift in Sources */,
+				5FDA16992AA87C8C003729BA /* ViewModelBaseBinding.swift in Sources */,
 				5FDA16802AA83AA8003729BA /* HotelCoordinator.swift in Sources */,
 				5FDA168B2AA84E61003729BA /* API.swift in Sources */,
 				5FDA16892AA8458C003729BA /* Hotel.swift in Sources */,

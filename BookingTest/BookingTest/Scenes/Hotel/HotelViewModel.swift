@@ -14,7 +14,8 @@ protocol HotelViewModelProtocol {
     
 }
 
-final class HotelViewModel: HotelViewModelProtocol {
+// MARK: - HotelViewModel
+final class HotelViewModel<T>: HotelViewModelProtocol {
     
 }
 
