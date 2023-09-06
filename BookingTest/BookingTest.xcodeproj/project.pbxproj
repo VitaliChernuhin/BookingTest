@@ -21,6 +21,7 @@
 		5FDA16832AA844BA003729BA /* ServicesFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FDA16822AA844BA003729BA /* ServicesFactory.swift */; };
 		5FDA16852AA8455A003729BA /* HotelProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FDA16842AA8455A003729BA /* HotelProvider.swift */; };
 		5FDA16892AA8458C003729BA /* Hotel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FDA16882AA8458C003729BA /* Hotel.swift */; };
+		5FDA168B2AA84E61003729BA /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FDA168A2AA84E60003729BA /* API.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +35,7 @@
 		5FDA16822AA844BA003729BA /* ServicesFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServicesFactory.swift; sourceTree = "<group>"; };
 		5FDA16842AA8455A003729BA /* HotelProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HotelProvider.swift; sourceTree = "<group>"; };
 		5FDA16882AA8458C003729BA /* Hotel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Hotel.swift; sourceTree = "<group>"; };
+		5FDA168A2AA84E60003729BA /* API.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -117,7 +119,7 @@
 		5FDA16812AA8449B003729BA /* Services */ = {
 			isa = PBXGroup;
 			children = (
-				5FDA16872AA84574003729BA /* HotelProvider */,
+				5FDA168C2AA84E67003729BA /* Providers */,
 				5FDA16822AA844BA003729BA /* ServicesFactory.swift */,
 			);
 			path = Services;
@@ -126,10 +128,19 @@
 		5FDA16872AA84574003729BA /* HotelProvider */ = {
 			isa = PBXGroup;
 			children = (
-				5FDA16842AA8455A003729BA /* HotelProvider.swift */,
 				5FDA16882AA8458C003729BA /* Hotel.swift */,
+				5FDA16842AA8455A003729BA /* HotelProvider.swift */,
 			);
 			path = HotelProvider;
+			sourceTree = "<group>";
+		};
+		5FDA168C2AA84E67003729BA /* Providers */ = {
+			isa = PBXGroup;
+			children = (
+				5FDA16872AA84574003729BA /* HotelProvider */,
+				5FDA168A2AA84E60003729BA /* API.swift */,
+			);
+			path = Providers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -221,6 +232,7 @@
 				5FDA16852AA8455A003729BA /* HotelProvider.swift in Sources */,
 				5FC900862AA709EB002217F0 /* BookingTestApp.swift in Sources */,
 				5FDA16802AA83AA8003729BA /* HotelCoordinator.swift in Sources */,
+				5FDA168B2AA84E61003729BA /* API.swift in Sources */,
 				5FDA16892AA8458C003729BA /* Hotel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
