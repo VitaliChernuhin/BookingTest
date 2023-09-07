@@ -44,11 +44,26 @@ private extension ServicesFactory {
     
     func registerServices() {
         registerHotelProvider()
+        registerImagesprovider()
     }
     
     func registerHotelProvider() {
         container.register(HotelProviding.self) { _ in
             return HotelProvider()
-        }
+        }.inObjectScope(.transient)
+    }
+    
+    func registerImagesprovider() {
+        container.register(ImagesProviding.self) { _ in
+            return ImagesProvider()
+        }.inObjectScope(.transient)
     }
 }
+
+// MARK: - Make error message (private)
+private extension ServicesFactory {
+    func makeErrorMessage<T: Any>(type: T.Type) -> String {
+        "ServicesFactory -> \(type) resolve error"
+    }
+}
+

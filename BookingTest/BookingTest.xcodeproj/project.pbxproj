@@ -33,7 +33,9 @@
 		5FDA16BC2AA88F2A003729BA /* SF-Pro-Display-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 5FDA16BB2AA88F26003729BA /* SF-Pro-Display-Regular.otf */; };
 		5FDA16BF2AA891CA003729BA /* Fonts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FDA16BE2AA891CA003729BA /* Fonts.swift */; };
 		5FDA16C12AA896A5003729BA /* ImageViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FDA16C02AA896A5003729BA /* ImageViewModel.swift */; };
+		5FDA16C42AA8B25E003729BA /* ImagesProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FDA16C32AA8B25E003729BA /* ImagesProvider.swift */; };
 		5FDA16C62AA8B3CE003729BA /* ImageSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FDA16C52AA8B3CE003729BA /* ImageSource.swift */; };
+		5FDA16C92AA8BE2A003729BA /* Bundle+appName.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FDA16C82AA8BE2A003729BA /* Bundle+appName.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -60,6 +62,7 @@
 		5FDA16BD2AA88FB3003729BA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5FDA16BE2AA891CA003729BA /* Fonts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Fonts.swift; sourceTree = "<group>"; };
 		5FDA16C02AA896A5003729BA /* ImageViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageViewModel.swift; sourceTree = "<group>"; };
+		5FDA16C32AA8B25E003729BA /* ImagesProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagesProvider.swift; sourceTree = "<group>"; };
 		5FDA16C52AA8B3CE003729BA /* ImageSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageSource.swift; sourceTree = "<group>"; };
 		5FDA16C82AA8BE2A003729BA /* Bundle+appName.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Bundle+appName.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -165,6 +168,7 @@
 			isa = PBXGroup;
 			children = (
 				5FDA16872AA84574003729BA /* HotelProvider */,
+				5FDA16C32AA8B25E003729BA /* ImagesProvider.swift */,
 				5FDA168A2AA84E60003729BA /* API.swift */,
 			);
 			path = Providers;
@@ -326,6 +330,7 @@
 				5FDA167E2AA83A83003729BA /* HotelView.swift in Sources */,
 				5FDA16A02AA87DE1003729BA /* ViewActionHandling.swift in Sources */,
 				5FDA169B2AA87D1D003729BA /* CancelableOwner.swift in Sources */,
+				5FDA16C42AA8B25E003729BA /* ImagesProvider.swift in Sources */,
 				5FDA16832AA844BA003729BA /* ServicesFactory.swift in Sources */,
 				5FDA16972AA873CF003729BA /* Bindable.swift in Sources */,
 				5FDA16782AA832C3003729BA /* MainCoordinator.swift in Sources */,
