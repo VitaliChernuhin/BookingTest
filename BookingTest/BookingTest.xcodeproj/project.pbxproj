@@ -61,6 +61,7 @@
 		5FDA16BE2AA891CA003729BA /* Fonts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Fonts.swift; sourceTree = "<group>"; };
 		5FDA16C02AA896A5003729BA /* ImageViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageViewModel.swift; sourceTree = "<group>"; };
 		5FDA16C52AA8B3CE003729BA /* ImageSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageSource.swift; sourceTree = "<group>"; };
+		5FDA16C82AA8BE2A003729BA /* Bundle+appName.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Bundle+appName.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -172,6 +173,7 @@
 		5FDA168D2AA858CC003729BA /* Shared */ = {
 			isa = PBXGroup;
 			children = (
+				5FDA16C72AA8BE09003729BA /* Extensions */,
 				5FDA16912AA85DF9003729BA /* Types */,
 				5FDA168E2AA858DB003729BA /* Protocols */,
 				5FDA16BE2AA891CA003729BA /* Fonts.swift */,
@@ -227,6 +229,14 @@
 				5FDA16BB2AA88F26003729BA /* SF-Pro-Display-Regular.otf */,
 			);
 			path = Fonts;
+			sourceTree = "<group>";
+		};
+		5FDA16C72AA8BE09003729BA /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				5FDA16C82AA8BE2A003729BA /* Bundle+appName.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -321,6 +331,7 @@
 				5FDA16782AA832C3003729BA /* MainCoordinator.swift in Sources */,
 				5FDA169E2AA87DC8003729BA /* ViewEventHandling.swift in Sources */,
 				5FDA16BF2AA891CA003729BA /* Fonts.swift in Sources */,
+				5FDA16C92AA8BE2A003729BA /* Bundle+appName.swift in Sources */,
 				5FDA16932AA85E12003729BA /* ViewEvent.swift in Sources */,
 				5FDA16952AA872DC003729BA /* HotelViewModel.swift in Sources */,
 				5FDA16852AA8455A003729BA /* HotelProvider.swift in Sources */,
