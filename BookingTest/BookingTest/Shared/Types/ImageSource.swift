@@ -12,4 +12,7 @@ struct ImageSource {
     var localPathUrl: URL?
     
     var isDownloaded: Bool { localPathUrl != nil }
+    var fileName: String? {
+        downloadPath.components(separatedBy: "/").last
+    }
 }
