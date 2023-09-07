@@ -59,9 +59,23 @@ private extension HotelViewModel {
             .requestHotel()
             .sink { completion in
                 self.handleCompletion(completion: completion)
-        } receiveValue: { hotel in
-            
+        } receiveValue: { [weak self] hotel in
+            self?.configureImages(imagePaths: hotel.imageUrls)
         }.store(in: &cancellables)
+    }
+    
+    func configureImages(imagePaths: [String]) {
+        let imagesSource: [ImageSource] = imagePaths.map { path in
+            ImageSource(downloadPath: path)
+        }
+        self.imagesProvider.requestImages(imageSources: imagesSource)
+            .sink { [weak self] completion in
+                self?.handleCompletion(completion: completion)
+            } receiveValue: { loadedImageSources in
+                self.imageLocalPaths = loadedImageSources.compactMap({ imageSource -> String? in
+                    imageSource.localPathUrl?.absoluteString
+                })
+            }.store(in: &cancellables)
     }
 }
 

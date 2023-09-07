@@ -36,7 +36,7 @@ struct HotelView<TViewModel: HotelViewModelProtocol>: View {
                 return viewModel
                     .imageLocalPaths
                     .compactMap({ imagePath -> UIImage? in
-                        UIImage(contentsOfFile: imagePath) ?? UIImage(named: imagePath)
+                        UIImage(contentsOfFile: imagePath) ?? UIImage(named: "imagePlaceholder")
                     })
                     .map({ image -> ImageViewModel in
                         let image = Image(uiImage: image)
