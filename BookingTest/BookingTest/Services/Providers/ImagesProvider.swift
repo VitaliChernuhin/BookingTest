@@ -106,25 +106,28 @@ private extension ImagesProvider {
 private extension ImagesProvider {
     func destinationUrl(imageSource: ImageSource) -> URL? {
         guard let fileName = imageSource.fileName,
-                let correctFileName = self.correctFileName(fileName: fileName)
+              let correctFileName = self.correctFileName(fileName: fileName)
         else { return nil }
         
-        self.log(message: "Correct fileName: \(correctFileName)")
+        self.log(message: "fileName: \(fileName)")
+        self.log(message: "CorrectFileName: \(correctFileName)")
         
         var pathUrl = self.imagesPathURL
         pathUrl.appendPathComponent(correctFileName)
-        
-        self.log(message: "Destination url: \(pathUrl.absoluteString)")
-        
         return pathUrl
     }
     
     func correctFileName(fileName: String) -> String? {
         guard !fileName.isEmpty else { return nil }
+        
+        // Remove empty spaces
         var fileName = fileName
         fileName.trimPrefix(" ")
         guard !fileName.isEmpty else { return nil }
-        return fileName
+        
+        guard let removedPercentsFilename = fileName.removingPercentEncoding
+        else { return nil }
+        return removedPercentsFilename
     }
     
     func imagesDownloadDestination(destinationURL: URL) -> DownloadDestination {
