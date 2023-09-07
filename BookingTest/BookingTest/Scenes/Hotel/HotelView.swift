@@ -86,7 +86,7 @@ struct HotelView_Previews: PreviewProvider {
     
     static var viewModel: HotelViewModel = {
         let imagePlaceholder = "imagePlaceholder"
-        var viewModel = HotelViewModel(hotelProvider: ServicesFactory.shared.service(type: HotelProviding.self))
+        var viewModel = HotelViewModel(hotelProvider: ServicesFactory.shared.service(type: HotelProviding.self), imagesProvider: ServicesFactory.shared.service(type: ImagesProviding.self))
         viewModel.imageLocalPaths.append(imagePlaceholder)
         return viewModel
     }()

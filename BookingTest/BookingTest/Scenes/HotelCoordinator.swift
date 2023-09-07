@@ -17,7 +17,7 @@ final class HotelCoordinator: NavigationCoordinatable {
 
 private extension HotelCoordinator {
     @ViewBuilder func makeHotel() -> some View {
-        let viewModel =  HotelViewModel(hotelProvider: ServicesFactory.shared.service(type: HotelProviding.self))
+        let viewModel =  HotelViewModel(hotelProvider: ServicesFactory.shared.service(type: HotelProviding.self), imagesProvider: ServicesFactory.shared.service(type: ImagesProviding.self))
         HotelView(viewModel: viewModel)
     }
 }

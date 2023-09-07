@@ -22,14 +22,7 @@ final class HotelViewModel: ViewModelBaseBinding,
     
     // Services
     private let hotelProvider: HotelProviding
-    
-    // Model
-//    private var hotel: Hotel? {
-//        didSet {
-//            guard let hotel = self.hotel else { return }
-//            self.imageLocalPaths
-//        }
-//    }
+    private let imagesProvider: ImagesProviding
     
     // MARK: Public properties
     
@@ -39,8 +32,9 @@ final class HotelViewModel: ViewModelBaseBinding,
     @Published var imageLocalPaths: [String] = []
     
     // MARK: Life cycle
-    init(hotelProvider: HotelProviding) {
+    init(hotelProvider: HotelProviding, imagesProvider: ImagesProviding) {
         self.hotelProvider = hotelProvider
+        self.imagesProvider = imagesProvider
     }
 }
 
