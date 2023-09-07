@@ -36,6 +36,7 @@
 		5FDA16C42AA8B25E003729BA /* ImagesProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FDA16C32AA8B25E003729BA /* ImagesProvider.swift */; };
 		5FDA16C62AA8B3CE003729BA /* ImageSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FDA16C52AA8B3CE003729BA /* ImageSource.swift */; };
 		5FDA16C92AA8BE2A003729BA /* Bundle+appName.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FDA16C82AA8BE2A003729BA /* Bundle+appName.swift */; };
+		5FDA16CB2AA9AD9B003729BA /* DebugLoging.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FDA16CA2AA9AD9B003729BA /* DebugLoging.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -65,6 +66,7 @@
 		5FDA16C32AA8B25E003729BA /* ImagesProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagesProvider.swift; sourceTree = "<group>"; };
 		5FDA16C52AA8B3CE003729BA /* ImageSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageSource.swift; sourceTree = "<group>"; };
 		5FDA16C82AA8BE2A003729BA /* Bundle+appName.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Bundle+appName.swift"; sourceTree = "<group>"; };
+		5FDA16CA2AA9AD9B003729BA /* DebugLoging.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DebugLoging.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -189,6 +191,7 @@
 			isa = PBXGroup;
 			children = (
 				5FDA169C2AA87D54003729BA /* ViewModel */,
+				5FDA16CA2AA9AD9B003729BA /* DebugLoging.swift */,
 				5FDA168F2AA858FA003729BA /* MessageRepresentable.swift */,
 			);
 			path = Protocols;
@@ -338,6 +341,7 @@
 				5FDA16BF2AA891CA003729BA /* Fonts.swift in Sources */,
 				5FDA16C92AA8BE2A003729BA /* Bundle+appName.swift in Sources */,
 				5FDA16932AA85E12003729BA /* ViewEvent.swift in Sources */,
+				5FDA16CB2AA9AD9B003729BA /* DebugLoging.swift in Sources */,
 				5FDA16952AA872DC003729BA /* HotelViewModel.swift in Sources */,
 				5FDA16852AA8455A003729BA /* HotelProvider.swift in Sources */,
 				5FDA16902AA858FA003729BA /* MessageRepresentable.swift in Sources */,
