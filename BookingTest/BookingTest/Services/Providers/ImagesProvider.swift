@@ -105,12 +105,23 @@ private extension ImagesProvider {
 // MARK: - Generate DownloadDestination (private)
 private extension ImagesProvider {
     func destinationUrl(imageSource: ImageSource) -> URL? {
-        guard let fileName = imageSource.fileName
+        guard let fileName = imageSource.fileName,
+                let correctFileName = self.correctFileName(fileName: fileName)
         else { return nil }
+        
         var pathUrl = self.imagesPathURL
-        pathUrl.appendPathComponent(fileName)
+        pathUrl.appendPathComponent(correctFileName)
         return pathUrl
     }
+    
+    func correctFileName(fileName: String) -> String? {
+        guard !fileName.isEmpty else { return nil }
+        var fileName = fileName
+        fileName.trimPrefix(" ")
+        guard !fileName.isEmpty else { return nil }
+        return fileName
+    }
+    
     func imagesDownloadDestination(destinationURL: URL) -> DownloadDestination {
         return { temporaryURL, response in
             return (destinationURL, [.removePreviousFile, .createIntermediateDirectories])
