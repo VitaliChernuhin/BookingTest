@@ -28,6 +28,7 @@ enum ImagesProviderError: Error, MessageRepresentable {
 // MARK: ImagesProviding (protocol)
 protocol ImagesProviding: AnyObject {
     func requestImage(source: ImageSource) -> AnyPublisher<ImageSource, ImagesProviderError>
+    func requestImages(imageSources: [ImageSource]) -> AnyPublisher<[ImageSource], ImagesProviderError>
 }
 
 // MARK: - ImagesProvider (implementation)
@@ -50,6 +51,17 @@ final class ImagesProvider: ImagesProviding {
             }
             return CurrentValueSubject<ImageSource, ImagesProviderError>(source).eraseToAnyPublisher()
         }.eraseToAnyPublisher()
+    }
+    
+    func requestImages(imageSources: [ImageSource]) -> AnyPublisher<[ImageSource], ImagesProviderError> {
+        let publishers: [AnyPublisher<ImageSource, ImagesProviderError>] =
+            imageSources.compactMap { [weak self] imageSource -> AnyPublisher<ImageSource, ImagesProviderError>? in
+                return self?.requestImage(source: imageSource)
+            }
+        return Publishers
+            .MergeMany(publishers)
+            .collect()
+            .eraseToAnyPublisher()
     }
 }
 
