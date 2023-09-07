@@ -32,7 +32,7 @@ protocol ImagesProviding: AnyObject {
 }
 
 // MARK: - ImagesProvider (implementation)
-final class ImagesProvider: ImagesProviding {
+final class ImagesProvider: ImagesProviding, DebugLoging {
     
     private var imagesPathURL: URL {
         let appName: String = Bundle.main.appName ?? "BookingTest"
@@ -109,8 +109,13 @@ private extension ImagesProvider {
                 let correctFileName = self.correctFileName(fileName: fileName)
         else { return nil }
         
+        self.log(message: "Correct fileName: \(correctFileName)")
+        
         var pathUrl = self.imagesPathURL
         pathUrl.appendPathComponent(correctFileName)
+        
+        self.log(message: "Destination url: \(pathUrl.absoluteString)")
+        
         return pathUrl
     }
     
@@ -128,6 +133,3 @@ private extension ImagesProvider {
         }
     }
 }
-
-
-

@@ -73,7 +73,7 @@ private extension HotelViewModel {
                 self?.handleCompletion(completion: completion)
             } receiveValue: { loadedImageSources in
                 self.imageLocalPaths = loadedImageSources.compactMap({ imageSource -> String? in
-                    imageSource.localPathUrl?.absoluteString
+                    imageSource.localPathUrl?.path()
                 })
             }.store(in: &cancellables)
     }

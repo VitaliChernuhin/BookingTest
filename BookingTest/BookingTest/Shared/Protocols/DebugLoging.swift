@@ -18,9 +18,9 @@ extension DebugLoging {
     func log(message: String, method: String? = nil) {
         #if DEBUG
         if let method = method {
-            print("\(source)->\(method)-> \(message)")
+            print("\n\(source)->\(method)-> \(message)")
         } else {
-            print("\(source)-> \(message)")
+            print("\n\(source)-> \(message)")
         }
         #endif
     }

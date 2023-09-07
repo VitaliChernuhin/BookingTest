@@ -81,6 +81,8 @@ struct HotelView<TViewModel: HotelViewModelProtocol>: View {
     }
 }
 
+extension HotelView: DebugLoging {}
+
 // MARK: - Preview
 struct HotelView_Previews: PreviewProvider {
     
