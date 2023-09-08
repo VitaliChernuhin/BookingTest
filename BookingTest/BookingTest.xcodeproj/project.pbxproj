@@ -37,6 +37,7 @@
 		5FDA16C62AA8B3CE003729BA /* ImageSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FDA16C52AA8B3CE003729BA /* ImageSource.swift */; };
 		5FDA16C92AA8BE2A003729BA /* Bundle+appName.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FDA16C82AA8BE2A003729BA /* Bundle+appName.swift */; };
 		5FDA16CB2AA9AD9B003729BA /* DebugLoging.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FDA16CA2AA9AD9B003729BA /* DebugLoging.swift */; };
+		5FDA16CF2AA9E6A6003729BA /* RatingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FDA16CE2AA9E6A6003729BA /* RatingView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -67,6 +68,7 @@
 		5FDA16C52AA8B3CE003729BA /* ImageSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageSource.swift; sourceTree = "<group>"; };
 		5FDA16C82AA8BE2A003729BA /* Bundle+appName.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Bundle+appName.swift"; sourceTree = "<group>"; };
 		5FDA16CA2AA9AD9B003729BA /* DebugLoging.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DebugLoging.swift; sourceTree = "<group>"; };
+		5FDA16CE2AA9E6A6003729BA /* RatingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RatingView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -179,9 +181,10 @@
 		5FDA168D2AA858CC003729BA /* Shared */ = {
 			isa = PBXGroup;
 			children = (
-				5FDA16C72AA8BE09003729BA /* Extensions */,
+				5FDA16CD2AA9E637003729BA /* UIComponents */,
 				5FDA16912AA85DF9003729BA /* Types */,
 				5FDA168E2AA858DB003729BA /* Protocols */,
+				5FDA16C72AA8BE09003729BA /* Extensions */,
 				5FDA16BE2AA891CA003729BA /* Fonts.swift */,
 			);
 			path = Shared;
@@ -244,6 +247,14 @@
 				5FDA16C82AA8BE2A003729BA /* Bundle+appName.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		5FDA16CD2AA9E637003729BA /* UIComponents */ = {
+			isa = PBXGroup;
+			children = (
+				5FDA16CE2AA9E6A6003729BA /* RatingView.swift */,
+			);
+			path = UIComponents;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -337,6 +348,7 @@
 				5FDA16832AA844BA003729BA /* ServicesFactory.swift in Sources */,
 				5FDA16972AA873CF003729BA /* Bindable.swift in Sources */,
 				5FDA16782AA832C3003729BA /* MainCoordinator.swift in Sources */,
+				5FDA16CF2AA9E6A6003729BA /* RatingView.swift in Sources */,
 				5FDA169E2AA87DC8003729BA /* ViewEventHandling.swift in Sources */,
 				5FDA16BF2AA891CA003729BA /* Fonts.swift in Sources */,
 				5FDA16C92AA8BE2A003729BA /* Bundle+appName.swift in Sources */,
