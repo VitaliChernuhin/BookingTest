@@ -78,7 +78,11 @@ struct HotelView<TViewModel: HotelViewModelProtocol>: View {
                     }
                     
                     // Hotel name
-                    
+                    HStack {
+                        Text(viewModel.hotelName)
+                            .font(Fonts.regular(size: 22).font)
+                        Spacer()
+                    }
                 }
                 
                

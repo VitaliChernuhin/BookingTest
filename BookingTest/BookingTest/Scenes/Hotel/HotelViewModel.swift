@@ -13,6 +13,7 @@ import Stinsen
 protocol HotelViewModelProtocol: ObservableObject, ViewEventHandling {
     var imageLocalPaths: [String] { get set }
     var rate: String { get set }
+    var hotelName: String { get set }
 }
 
 // MARK: - HotelViewModel
@@ -32,6 +33,7 @@ final class HotelViewModel: ViewModelBaseBinding,
     
     @Published var imageLocalPaths: [String] = []
     @Published var rate: String = ""
+    @Published var hotelName: String = ""
     
     // MARK: Life cycle
     init(hotelProvider: HotelProviding, imagesProvider: ImagesProviding) {
@@ -64,6 +66,7 @@ private extension HotelViewModel {
         } receiveValue: { [weak self] hotel in
             self?.configureImages(imagePaths: hotel.imageUrls)
             self?.rate = "\(hotel.rating) \(hotel.ratingName)"
+            self?.hotelName = hotel.name
         }.store(in: &cancellables)
     }
     
