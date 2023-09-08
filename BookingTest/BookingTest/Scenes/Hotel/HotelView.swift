@@ -48,7 +48,6 @@ struct HotelView<TViewModel: HotelViewModelProtocol>: View {
             }
         }()
             
-        
         return ZStack {
             VStack(spacing: 16) {
                 
@@ -69,6 +68,21 @@ struct HotelView<TViewModel: HotelViewModelProtocol>: View {
                 }
                 .frame(height: 257)
                 .cornerRadius(15)
+                
+                VStack(spacing: 8) {
+                    
+                    // Rate
+                    HStack {
+                        RatingView(rate: $viewModel.rate)
+                        Spacer( )
+                    }
+                    
+                    // Hotel name
+                    
+                }
+                
+               
+                
                 
                 Spacer()
                 
