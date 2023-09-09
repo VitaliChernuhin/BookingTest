@@ -15,6 +15,7 @@ protocol HotelViewModelProtocol: ObservableObject, ViewEventHandling {
     var rate: String { get set }
     var hotelName: String { get set }
     var hotelAddress: String { get set }
+    var price: String { get set }
 }
 
 // MARK: - HotelViewModel
@@ -27,6 +28,15 @@ final class HotelViewModel: ViewModelBaseBinding,
     private let hotelProvider: HotelProviding
     private let imagesProvider: ImagesProviding
     
+    private var numberFormatter: NumberFormatter = {
+        let numberFormatter = NumberFormatter()
+        numberFormatter.groupingSeparator = " "
+        numberFormatter.usesGroupingSeparator = true
+        numberFormatter.groupingSize = 3
+        numberFormatter.currencySymbol = "₽"
+        return numberFormatter
+    }()
+    
     // MARK: Public properties
     
     private(set) var onAppearSubject = PassthroughSubject<Void, Never>()
@@ -36,6 +46,7 @@ final class HotelViewModel: ViewModelBaseBinding,
     @Published var rate: String = ""
     @Published var hotelName: String = ""
     @Published var hotelAddress: String = ""
+    @Published var price: String = ""
     
     // MARK: Life cycle
     init(hotelProvider: HotelProviding, imagesProvider: ImagesProviding) {
@@ -70,6 +81,7 @@ private extension HotelViewModel {
             self?.rate = "\(hotel.rating) \(hotel.ratingName)"
             self?.hotelName = hotel.name
             self?.hotelAddress = hotel.adress
+            self?.configurePrice(price: hotel.minPrice)
         }.store(in: &cancellables)
     }
     
@@ -85,6 +97,10 @@ private extension HotelViewModel {
                     imageSource.localPathUrl?.path()
                 })
             }.store(in: &cancellables)
+    }
+    
+    func configurePrice(price: Double) {
+        self.price = "От " + (self.numberFormatter.string(from: NSNumber(value: price)) ?? "")
     }
 }
 
