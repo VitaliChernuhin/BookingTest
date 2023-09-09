@@ -91,11 +91,19 @@ struct HotelView<TViewModel: HotelViewModelProtocol>: View {
                     }
                     
                     // Hotel price
-                    HStack {
+                    HStack(spacing: 8) {
                         Text(viewModel.price)
                             .font(Fonts.regular(size: 30).font)
+                        VStack {
+                            Spacer()
+                            Text(viewModel.priceDescription)
+                                .font(Fonts.regular(size: 16).font)
+                                .foregroundColor(Color("DescriptionForegroundColor"))
+                        }
                         Spacer()
-                    }
+                    }.frame(height: 28)
+                    
+                    
                 }
                 
                 Spacer()

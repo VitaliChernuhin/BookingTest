@@ -16,6 +16,7 @@ protocol HotelViewModelProtocol: ObservableObject, ViewEventHandling {
     var hotelName: String { get set }
     var hotelAddress: String { get set }
     var price: String { get set }
+    var priceDescription: String { get set }
 }
 
 // MARK: - HotelViewModel
@@ -30,10 +31,12 @@ final class HotelViewModel: ViewModelBaseBinding,
     
     private var numberFormatter: NumberFormatter = {
         let numberFormatter = NumberFormatter()
+        numberFormatter.numberStyle = .currency
         numberFormatter.groupingSeparator = " "
         numberFormatter.usesGroupingSeparator = true
         numberFormatter.groupingSize = 3
-        numberFormatter.currencySymbol = "₽"
+        numberFormatter.locale = Locale(identifier: "ru_RU")
+        numberFormatter.maximumFractionDigits = 0
         return numberFormatter
     }()
     
@@ -47,6 +50,7 @@ final class HotelViewModel: ViewModelBaseBinding,
     @Published var hotelName: String = ""
     @Published var hotelAddress: String = ""
     @Published var price: String = ""
+    @Published var priceDescription: String = ""
     
     // MARK: Life cycle
     init(hotelProvider: HotelProviding, imagesProvider: ImagesProviding) {
@@ -82,6 +86,7 @@ private extension HotelViewModel {
             self?.hotelName = hotel.name
             self?.hotelAddress = hotel.adress
             self?.configurePrice(price: hotel.minPrice)
+            self?.priceDescription = hotel.priceDescription
         }.store(in: &cancellables)
     }
     
