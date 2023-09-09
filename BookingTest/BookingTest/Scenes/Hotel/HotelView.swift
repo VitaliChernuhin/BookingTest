@@ -83,6 +83,12 @@ struct HotelView<TViewModel: HotelViewModelProtocol>: View {
                             .font(Fonts.regular(size: 22).font)
                         Spacer()
                     }
+                    
+                    // Hotel address
+                    HStack {
+                        AddressButtonView(adress: $viewModel.hotelAddress)
+                        Spacer()
+                    }
                 }
                 
                

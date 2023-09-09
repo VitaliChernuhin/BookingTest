@@ -14,6 +14,7 @@ protocol HotelViewModelProtocol: ObservableObject, ViewEventHandling {
     var imageLocalPaths: [String] { get set }
     var rate: String { get set }
     var hotelName: String { get set }
+    var hotelAddress: String { get set }
 }
 
 // MARK: - HotelViewModel
@@ -34,6 +35,7 @@ final class HotelViewModel: ViewModelBaseBinding,
     @Published var imageLocalPaths: [String] = []
     @Published var rate: String = ""
     @Published var hotelName: String = ""
+    @Published var hotelAddress: String = ""
     
     // MARK: Life cycle
     init(hotelProvider: HotelProviding, imagesProvider: ImagesProviding) {
@@ -67,6 +69,7 @@ private extension HotelViewModel {
             self?.configureImages(imagePaths: hotel.imageUrls)
             self?.rate = "\(hotel.rating) \(hotel.ratingName)"
             self?.hotelName = hotel.name
+            self?.hotelAddress = hotel.adress
         }.store(in: &cancellables)
     }
     
