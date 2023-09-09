@@ -38,6 +38,7 @@
 		5FDA16C92AA8BE2A003729BA /* Bundle+appName.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FDA16C82AA8BE2A003729BA /* Bundle+appName.swift */; };
 		5FDA16CB2AA9AD9B003729BA /* DebugLoging.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FDA16CA2AA9AD9B003729BA /* DebugLoging.swift */; };
 		5FDA16CF2AA9E6A6003729BA /* RatingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FDA16CE2AA9E6A6003729BA /* RatingView.swift */; };
+		5FDA16D12AAAE9E5003729BA /* AddressButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FDA16D02AAAE9E5003729BA /* AddressButtonView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -69,6 +70,7 @@
 		5FDA16C82AA8BE2A003729BA /* Bundle+appName.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Bundle+appName.swift"; sourceTree = "<group>"; };
 		5FDA16CA2AA9AD9B003729BA /* DebugLoging.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DebugLoging.swift; sourceTree = "<group>"; };
 		5FDA16CE2AA9E6A6003729BA /* RatingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RatingView.swift; sourceTree = "<group>"; };
+		5FDA16D02AAAE9E5003729BA /* AddressButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddressButtonView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -253,6 +255,7 @@
 			isa = PBXGroup;
 			children = (
 				5FDA16CE2AA9E6A6003729BA /* RatingView.swift */,
+				5FDA16D02AAAE9E5003729BA /* AddressButtonView.swift */,
 			);
 			path = UIComponents;
 			sourceTree = "<group>";
@@ -351,6 +354,7 @@
 				5FDA16CF2AA9E6A6003729BA /* RatingView.swift in Sources */,
 				5FDA169E2AA87DC8003729BA /* ViewEventHandling.swift in Sources */,
 				5FDA16BF2AA891CA003729BA /* Fonts.swift in Sources */,
+				5FDA16D12AAAE9E5003729BA /* AddressButtonView.swift in Sources */,
 				5FDA16C92AA8BE2A003729BA /* Bundle+appName.swift in Sources */,
 				5FDA16932AA85E12003729BA /* ViewEvent.swift in Sources */,
 				5FDA16CB2AA9AD9B003729BA /* DebugLoging.swift in Sources */,
