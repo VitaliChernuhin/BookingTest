@@ -91,11 +91,7 @@ struct HotelView<TViewModel: HotelViewModelProtocol>: View {
                     }
                 }
                 
-               
-                
-                
                 Spacer()
-                
             }
             .padding(EdgeInsets(top: 19, leading: 16,
                                 bottom: 0, trailing: 16))

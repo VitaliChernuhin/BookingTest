@@ -39,6 +39,7 @@
 		5FDA16CB2AA9AD9B003729BA /* DebugLoging.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FDA16CA2AA9AD9B003729BA /* DebugLoging.swift */; };
 		5FDA16CF2AA9E6A6003729BA /* RatingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FDA16CE2AA9E6A6003729BA /* RatingView.swift */; };
 		5FDA16D12AAAE9E5003729BA /* AddressButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FDA16D02AAAE9E5003729BA /* AddressButtonView.swift */; };
+		5FDA16D32AAC4038003729BA /* PriceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FDA16D22AAC4038003729BA /* PriceView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -71,6 +72,7 @@
 		5FDA16CA2AA9AD9B003729BA /* DebugLoging.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DebugLoging.swift; sourceTree = "<group>"; };
 		5FDA16CE2AA9E6A6003729BA /* RatingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RatingView.swift; sourceTree = "<group>"; };
 		5FDA16D02AAAE9E5003729BA /* AddressButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddressButtonView.swift; sourceTree = "<group>"; };
+		5FDA16D22AAC4038003729BA /* PriceView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PriceView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -256,6 +258,7 @@
 			children = (
 				5FDA16CE2AA9E6A6003729BA /* RatingView.swift */,
 				5FDA16D02AAAE9E5003729BA /* AddressButtonView.swift */,
+				5FDA16D22AAC4038003729BA /* PriceView.swift */,
 			);
 			path = UIComponents;
 			sourceTree = "<group>";
@@ -348,6 +351,7 @@
 				5FDA16A02AA87DE1003729BA /* ViewActionHandling.swift in Sources */,
 				5FDA169B2AA87D1D003729BA /* CancelableOwner.swift in Sources */,
 				5FDA16C42AA8B25E003729BA /* ImagesProvider.swift in Sources */,
+				5FDA16D32AAC4038003729BA /* PriceView.swift in Sources */,
 				5FDA16832AA844BA003729BA /* ServicesFactory.swift in Sources */,
 				5FDA16972AA873CF003729BA /* Bindable.swift in Sources */,
 				5FDA16782AA832C3003729BA /* MainCoordinator.swift in Sources */,
