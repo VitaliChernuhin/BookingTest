@@ -49,68 +49,76 @@ struct HotelView<TViewModel: HotelViewModelProtocol>: View {
         }()
             
         return ZStack {
-            VStack(spacing: 16) {
+            
+            Color("GrayBackgroundColor")
+            
+         
+            VStack(spacing: 8) {
                 
-                // Title
-                HStack {
-                    Text("Отель")
-                        .font(Fonts.regular(size: 19).font)
-                }
-                
-                // Image carousel
-                ACarousel(imageViewModels,
-                          index: $imageIndex,
-                          spacing: 0,
-                          headspace: 0) { imageVewModel in
-                    imageVewModel.image
-                        .resizable()
-                        .scaledToFill()
-                }
-                .frame(height: 257)
-                .cornerRadius(15)
-                
-                VStack(spacing: 8) {
+                VStack(spacing: 16) {
                     
-                    // Rate
+                    // Title
                     HStack {
-                        RatingView(rate: $viewModel.rate)
-                        Spacer( )
+                        Text("Отель")
+                            .font(Fonts.regular(size: 19).font)
                     }
                     
-                    // Hotel name
-                    HStack {
-                        Text(viewModel.hotelName)
-                            .font(Fonts.regular(size: 22).font)
-                        Spacer()
+                    // Image carousel
+                    ACarousel(imageViewModels,
+                              index: $imageIndex,
+                              spacing: 0,
+                              headspace: 0) { imageVewModel in
+                        imageVewModel.image
+                            .resizable()
+                            .scaledToFill()
                     }
+                    .frame(height: 257)
+                    .cornerRadius(15)
                     
-                    // Hotel address
-                    HStack {
-                        AddressButtonView(adress: $viewModel.hotelAddress)
-                        Spacer()
-                    }
-                    
-                    // Hotel price
-                    HStack(spacing: 8) {
-                        Text(viewModel.price)
-                            .font(Fonts.regular(size: 30).font)
-                        VStack {
-                            Spacer()
-                            Text(viewModel.priceDescription)
-                                .font(Fonts.regular(size: 16).font)
-                                .foregroundColor(Color("DescriptionForegroundColor"))
+                    VStack(spacing: 8) {
+                        
+                        // Rate
+                        HStack {
+                            RatingView(rate: $viewModel.rate)
+                            Spacer( )
                         }
-                        Spacer()
-                    }.frame(height: 28)
-                    
-                    
+                        
+                        // Hotel name
+                        HStack {
+                            Text(viewModel.hotelName)
+                                .font(Fonts.regular(size: 22).font)
+                            Spacer()
+                        }
+                        
+                        // Hotel address
+                        HStack {
+                            AddressButtonView(adress: $viewModel.hotelAddress)
+                            Spacer()
+                        }
+                        
+                        // Hotel price
+                        HStack(spacing: 8) {
+                            Text(viewModel.price)
+                                .font(Fonts.regular(size: 30).font)
+                            VStack {
+                                Spacer()
+                                Text(viewModel.priceDescription)
+                                    .font(Fonts.regular(size: 16).font)
+                                    .foregroundColor(Color("DescriptionForegroundColor"))
+                            }
+                            Spacer()
+                        }.frame(height: 28)
+                    }
+                    .padding(.bottom, 16)
                 }
+                    .padding(.horizontal, 16)
+                    .background(Color.white)
+                    .cornerRadius(12, corners: [.bottomLeft, .bottomRight])
                 
                 Spacer()
             }
-            .padding(EdgeInsets(top: 19, leading: 16,
-                                bottom: 0, trailing: 16))
-        }.onAppear {
+        }
+        .onAppear {
             viewModel.handle(event: .onAppear)
         }
     }
