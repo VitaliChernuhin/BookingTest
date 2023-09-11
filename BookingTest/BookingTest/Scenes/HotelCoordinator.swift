@@ -20,4 +20,8 @@ private extension HotelCoordinator {
         let viewModel =  HotelViewModel(hotelProvider: ServicesFactory.shared.service(type: HotelProviding.self), imagesProvider: ServicesFactory.shared.service(type: ImagesProviding.self))
         HotelView(viewModel: viewModel)
     }
+    
+    @ViewBuilder func makeSelectHotel() -> some View {
+        
+    }
 }

@@ -9,7 +9,7 @@ import Foundation
 import Combine
 import Stinsen
 
-// MARK: - HotelViewModelProtocol (protocol)
+// MARK: HotelViewModelProtocol (protocol)
 protocol HotelViewModelProtocol: ObservableObject, ViewEventHandling, ViewActionHandling {
     
     // Common hotel info
