@@ -48,6 +48,7 @@
 		5FDA16EB2AAF102E003729BA /* HotelContentCategoryViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FDA16EA2AAF102E003729BA /* HotelContentCategoryViewModel.swift */; };
 		5FDA16ED2AAF1516003729BA /* AboutHotelCategoriesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FDA16EC2AAF1516003729BA /* AboutHotelCategoriesView.swift */; };
 		5FDA16EF2AAF2CF8003729BA /* SelectNumberButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FDA16EE2AAF2CF8003729BA /* SelectNumberButtonView.swift */; };
+		5FDA16F12AAF3536003729BA /* NavigationTitledView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FDA16F02AAF3536003729BA /* NavigationTitledView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -89,6 +90,7 @@
 		5FDA16EA2AAF102E003729BA /* HotelContentCategoryViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HotelContentCategoryViewModel.swift; sourceTree = "<group>"; };
 		5FDA16EC2AAF1516003729BA /* AboutHotelCategoriesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutHotelCategoriesView.swift; sourceTree = "<group>"; };
 		5FDA16EE2AAF2CF8003729BA /* SelectNumberButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectNumberButtonView.swift; sourceTree = "<group>"; };
+		5FDA16F02AAF3536003729BA /* NavigationTitledView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationTitledView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -282,6 +284,7 @@
 				5FDA16DB2AACAFB7003729BA /* DescriptionView.swift */,
 				5FDA16DF2AAEE22B003729BA /* CategoryView.swift */,
 				5FDA16EE2AAF2CF8003729BA /* SelectNumberButtonView.swift */,
+				5FDA16F02AAF3536003729BA /* NavigationTitledView.swift */,
 			);
 			path = UIComponents;
 			sourceTree = "<group>";
@@ -409,6 +412,7 @@
 				5FDA169E2AA87DC8003729BA /* ViewEventHandling.swift in Sources */,
 				5FDA16BF2AA891CA003729BA /* Fonts.swift in Sources */,
 				5FDA16DC2AACAFB7003729BA /* DescriptionView.swift in Sources */,
+				5FDA16F12AAF3536003729BA /* NavigationTitledView.swift in Sources */,
 				5FDA16D12AAAE9E5003729BA /* AddressButtonView.swift in Sources */,
 				5FDA16C92AA8BE2A003729BA /* Bundle+appName.swift in Sources */,
 				5FDA16932AA85E12003729BA /* ViewEvent.swift in Sources */,
