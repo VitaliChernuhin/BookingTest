@@ -14,6 +14,7 @@ import ACarousel
 enum HotelViewAction {
     case address
     case contentCategory(HotelContentCategory)
+    case selectNumber
 }
 
 // MARK: - HotelView
@@ -127,8 +128,15 @@ struct HotelView<TViewModel: HotelViewModelProtocol>: View where TViewModel.View
                         viewModel.handle(action: .contentCategory(category))
                     }
                     .padding(.horizontal, 16)
+                    .padding(.bottom, 12)
+                    
+                    SelectNumberButtonView {
+                        viewModel.handle(action: .selectNumber)
+                    }
+                    .padding(EdgeInsets(top: 12, leading: 16, bottom: 26, trailing: 16))
                 }
                 .background(Color.white)
+                .cornerRadius(12, corners: .allCorners)
             }
         }
         .onAppear {

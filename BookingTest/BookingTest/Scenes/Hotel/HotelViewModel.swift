@@ -104,6 +104,8 @@ extension HotelViewModel: ViewActionHandling {
             break
         case .contentCategory(_):
             break
+        case .selectNumber:
+            break
         }
     }
 }

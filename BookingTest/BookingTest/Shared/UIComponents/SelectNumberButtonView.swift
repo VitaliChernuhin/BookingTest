@@ -12,8 +12,10 @@ struct SelectNumberButtonView: View {
     let action: () -> Void
     
     var body: some View {
-        Button("К выбору номера", action: action).foregroundColor(.white)
-            .frame(height: 48)
+        Button("К выбору номера", action: action)
+            .font(Fonts.regular(size: 16).font)
+            .foregroundColor(.white)
+            .frame(maxWidth: .infinity,minHeight: 48)
             .background(Color("SelectNumberButtonBackgroundColor"))
             .cornerRadius(15, corners: .allCorners)
     }
