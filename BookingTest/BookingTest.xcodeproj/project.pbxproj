@@ -42,6 +42,7 @@
 		5FDA16D52AAC5AD5003729BA /* RoundedCorner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FDA16D42AAC5AD5003729BA /* RoundedCorner.swift */; };
 		5FDA16D72AAC5B06003729BA /* View+CornerRadius.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FDA16D62AAC5B06003729BA /* View+CornerRadius.swift */; };
 		5FDA16DC2AACAFB7003729BA /* DescriptionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FDA16DB2AACAFB7003729BA /* DescriptionView.swift */; };
+		5FDA16E02AAEE22C003729BA /* CategoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FDA16DF2AAEE22B003729BA /* CategoryView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -77,6 +78,7 @@
 		5FDA16D42AAC5AD5003729BA /* RoundedCorner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedCorner.swift; sourceTree = "<group>"; };
 		5FDA16D62AAC5B06003729BA /* View+CornerRadius.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+CornerRadius.swift"; sourceTree = "<group>"; };
 		5FDA16DB2AACAFB7003729BA /* DescriptionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DescriptionView.swift; sourceTree = "<group>"; };
+		5FDA16DF2AAEE22B003729BA /* CategoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -265,6 +267,7 @@
 				5FDA16D02AAAE9E5003729BA /* AddressButtonView.swift */,
 				5FDA16D42AAC5AD5003729BA /* RoundedCorner.swift */,
 				5FDA16DB2AACAFB7003729BA /* DescriptionView.swift */,
+				5FDA16DF2AAEE22B003729BA /* CategoryView.swift */,
 			);
 			path = UIComponents;
 			sourceTree = "<group>";
@@ -375,6 +378,7 @@
 				5FDA16902AA858FA003729BA /* MessageRepresentable.swift in Sources */,
 				5FDA16C12AA896A5003729BA /* ImageViewModel.swift in Sources */,
 				5FC900862AA709EB002217F0 /* BookingTestApp.swift in Sources */,
+				5FDA16E02AAEE22C003729BA /* CategoryView.swift in Sources */,
 				5FDA16992AA87C8C003729BA /* ViewModelBaseBinding.swift in Sources */,
 				5FDA16C62AA8B3CE003729BA /* ImageSource.swift in Sources */,
 				5FDA16802AA83AA8003729BA /* HotelCoordinator.swift in Sources */,
