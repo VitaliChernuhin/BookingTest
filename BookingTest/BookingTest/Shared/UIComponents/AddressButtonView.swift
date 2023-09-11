@@ -10,6 +10,7 @@ import SwiftUI
 struct AddressButtonView: View {
     
     @Binding var adress: String
+    let action: () -> Void
     
     var body: some View {
         Button(adress) {
@@ -27,6 +28,7 @@ struct AddressButtonView_Previews: PreviewProvider {
     @State static var title = "Адрес отеля"
     
     static var previews: some View {
-        AddressButtonView(adress: $title)
+        AddressButtonView(adress: $title, action: {
+        })
     }
 }

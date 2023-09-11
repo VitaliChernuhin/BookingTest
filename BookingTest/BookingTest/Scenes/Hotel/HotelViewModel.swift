@@ -10,13 +10,19 @@ import Combine
 import Stinsen
 
 // MARK: HotelViewModelProtocol (protocol)
-protocol HotelViewModelProtocol: ObservableObject, ViewEventHandling {
+protocol HotelViewModelProtocol: ObservableObject, ViewEventHandling, ViewActionHandling {
+    
+    // Common hotel info
     var imageLocalPaths: [String] { get set }
     var rate: String { get set }
     var hotelName: String { get set }
     var hotelAddress: String { get set }
     var price: String { get set }
     var priceDescription: String { get set }
+    
+    // Hotel description
+    var particularity: [String] { get set }
+    var hotelDescription: String { get set }
 }
 
 // MARK: - HotelViewModel
@@ -45,12 +51,17 @@ final class HotelViewModel: ViewModelBaseBinding,
     private(set) var onAppearSubject = PassthroughSubject<Void, Never>()
     var cancellables = Set<AnyCancellable>()
     
+    // Common hotel info
     @Published var imageLocalPaths: [String] = []
     @Published var rate: String = ""
     @Published var hotelName: String = ""
     @Published var hotelAddress: String = ""
     @Published var price: String = ""
     @Published var priceDescription: String = ""
+    
+    // Hotel info description
+    @Published var particularity: [String] = []
+    @Published var hotelDescription: String = ""
     
     // MARK: Life cycle
     init(hotelProvider: HotelProviding, imagesProvider: ImagesProviding) {
@@ -69,7 +80,10 @@ extension HotelViewModel {
 // MARK: - ViewActionHandling (implementation)
 extension HotelViewModel: ViewActionHandling {
     func handle(action: HotelViewAction) {
-        
+        switch action{
+        case .address:
+            break
+        }
     }
 }
 
@@ -87,6 +101,8 @@ private extension HotelViewModel {
             self?.hotelAddress = hotel.adress
             self?.configurePrice(price: hotel.minPrice)
             self?.priceDescription = hotel.priceDescription
+            self?.particularity = hotel.hotelDescription.peculiarities
+            self?.hotelDescription = hotel.hotelDescription.description
         }.store(in: &cancellables)
     }
     
