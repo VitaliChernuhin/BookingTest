@@ -52,6 +52,7 @@
 		5FDA16F42AAF3800003729BA /* SelectNumberView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FDA16F32AAF3800003729BA /* SelectNumberView.swift */; };
 		5FDA16F62AAF3812003729BA /* SelectNumberViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FDA16F52AAF3812003729BA /* SelectNumberViewModel.swift */; };
 		5FE46A092AAF3FD300BA6BAC /* Room.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FE46A082AAF3FD300BA6BAC /* Room.swift */; };
+		5FE46A0B2AAF458600BA6BAC /* RoomsProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FE46A0A2AAF458600BA6BAC /* RoomsProvider.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -97,6 +98,7 @@
 		5FDA16F32AAF3800003729BA /* SelectNumberView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectNumberView.swift; sourceTree = "<group>"; };
 		5FDA16F52AAF3812003729BA /* SelectNumberViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectNumberViewModel.swift; sourceTree = "<group>"; };
 		5FE46A082AAF3FD300BA6BAC /* Room.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Room.swift; sourceTree = "<group>"; };
+		5FE46A0A2AAF458600BA6BAC /* RoomsProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoomsProvider.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -335,6 +337,7 @@
 			isa = PBXGroup;
 			children = (
 				5FE46A082AAF3FD300BA6BAC /* Room.swift */,
+				5FE46A0A2AAF458600BA6BAC /* RoomsProvider.swift */,
 			);
 			path = RoomsProvider;
 			sourceTree = "<group>";
@@ -444,6 +447,7 @@
 				5FDA16932AA85E12003729BA /* ViewEvent.swift in Sources */,
 				5FDA16EF2AAF2CF8003729BA /* SelectNumberButtonView.swift in Sources */,
 				5FDA16ED2AAF1516003729BA /* AboutHotelCategoriesView.swift in Sources */,
+				5FE46A0B2AAF458600BA6BAC /* RoomsProvider.swift in Sources */,
 				5FDA16CB2AA9AD9B003729BA /* DebugLoging.swift in Sources */,
 				5FDA16F62AAF3812003729BA /* SelectNumberViewModel.swift in Sources */,
 				5FDA16952AA872DC003729BA /* HotelViewModel.swift in Sources */,

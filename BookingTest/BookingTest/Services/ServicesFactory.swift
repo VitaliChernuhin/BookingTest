@@ -45,6 +45,7 @@ private extension ServicesFactory {
     func registerServices() {
         registerHotelProvider()
         registerImagesprovider()
+        registerRoomsProvider()
     }
     
     func registerHotelProvider() {
@@ -56,6 +57,12 @@ private extension ServicesFactory {
     func registerImagesprovider() {
         container.register(ImagesProviding.self) { _ in
             return ImagesProvider()
+        }.inObjectScope(.transient)
+    }
+    
+    func registerRoomsProvider() {
+        container.register(RoomsProviding.self) { _ in
+            return RoomsProvider()
         }.inObjectScope(.transient)
     }
 }
