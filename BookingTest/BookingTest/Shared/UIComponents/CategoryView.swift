@@ -15,34 +15,39 @@ struct CategoryView: View {
     @Binding var description: String
     
     var body: some View {
-        HStack {
-            Image(imageName)
-                .frame(width: 24, height: 24)
-                .padding(.vertical, 7)
-            
-            VStack(spacing: 2) {
-                HStack {
-                    Text(title)
-                        .font(Fonts.regular(size: 16).font)
-                        .foregroundColor(Color("CategoryTitleForeground"))
-                    Spacer()
+        
+        VStack(spacing: 10) {
+            HStack {
+                Image(imageName)
+                    .frame(width: 24, height: 24)
+                
+                VStack(spacing: 2) {
+                    HStack {
+                        Text(title)
+                            .font(Fonts.regular(size: 16).font)
+                            .foregroundColor(Color("CategoryTitleForeground"))
+                        Spacer()
+                    }
+                    HStack {
+                        Text(description).font(Fonts.regular(size: 14).font)
+                            .foregroundColor(Color("CategoryDescriptionColor"))
+                        Spacer()
+                    }
                 }
-                HStack {
-                    Text(description).font(Fonts.regular(size: 14).font)
-                        .foregroundColor(Color("CategoryDescriptionColor"))
-                    Spacer()
-                }
+                .padding(.leading, 12)
+                
+                Spacer()
+                
+                Image("rightArrow")
+                    .frame(width: 24, height: 24)
+                    .padding(.trailing, 15)
             }
-            .padding(.leading, 12)
+            .frame(height: 38)
             
-            Spacer()
-            
-            Image("rightArrow")
-                .frame(width: 24, height: 24)
-                .padding(.trailing, 15)
+            Divider().padding(.leading, 36)
         }
-        .background(Color.white)
-        .frame(height: 38)
+        .frame(height: 49)
+        
     }
 }
 

@@ -9,7 +9,7 @@ import Foundation
 import Combine
 import Stinsen
 
-// MARK: HotelViewModelProtocol (protocol)
+// MARK: - HotelViewModelProtocol (protocol)
 protocol HotelViewModelProtocol: ObservableObject, ViewEventHandling, ViewActionHandling {
     
     // Common hotel info
@@ -21,8 +21,12 @@ protocol HotelViewModelProtocol: ObservableObject, ViewEventHandling, ViewAction
     var priceDescription: String { get set }
     
     // Hotel description
+    var aboutHotelTitle: String { get set }
     var particularity: [String] { get set }
     var hotelDescription: String { get set }
+    
+    // Hotel content categories
+    var hotelContentCategoryViewModels: [HotelContentCategoryViewModel] { get set }
 }
 
 // MARK: - HotelViewModel
@@ -60,8 +64,23 @@ final class HotelViewModel: ViewModelBaseBinding,
     @Published var priceDescription: String = ""
     
     // Hotel info description
+    @Published var aboutHotelTitle: String = "Об отеле"
     @Published var particularity: [String] = []
     @Published var hotelDescription: String = ""
+    @Published var hotelContentCategoryViewModels: [HotelContentCategoryViewModel] = {
+        var viewModels: [HotelContentCategoryViewModel] = []
+        
+        let conveniencesViewModel = HotelContentCategoryViewModel(category: .сonveniences)
+        viewModels.append(conveniencesViewModel)
+        
+        let inclidedViewModel = HotelContentCategoryViewModel(category: .included)
+        viewModels.append(inclidedViewModel)
+        
+        let notIncludedViewModel = HotelContentCategoryViewModel(category: .notIncluded)
+        viewModels.append(notIncludedViewModel)
+        
+        return viewModels
+    }()
     
     // MARK: Life cycle
     init(hotelProvider: HotelProviding, imagesProvider: ImagesProviding) {
@@ -82,6 +101,8 @@ extension HotelViewModel: ViewActionHandling {
     func handle(action: HotelViewAction) {
         switch action{
         case .address:
+            break
+        case .contentCategory(_):
             break
         }
     }

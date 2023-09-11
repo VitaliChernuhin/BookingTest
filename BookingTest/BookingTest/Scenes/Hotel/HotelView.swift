@@ -13,6 +13,7 @@ import ACarousel
 // MARK: HotelViewAction
 enum HotelViewAction {
     case address
+    case contentCategory(HotelContentCategory)
 }
 
 // MARK: - HotelView
@@ -119,54 +120,15 @@ struct HotelView<TViewModel: HotelViewModelProtocol>: View where TViewModel.View
                 .cornerRadius(12, corners: [.bottomLeft, .bottomRight])
                 
                 ScrollView {
-                    
-                    // Hotel description
-                    VStack(spacing: 16) {
-                        
-                        // Title
-                        HStack {
-                            Text("Об отеле")
-                            Spacer()
-                        }.padding(EdgeInsets(top: 16,
-                                             leading: 16,
-                                             bottom: 0,
-                                             trailing: 16))
-                        // Hotel particularity
-                        if !viewModel.particularity.isEmpty {
-                            VStack(spacing: 8) {
-                                HStack(spacing: 8) {
-                                    DescriptionView(description: $viewModel.particularity[0])
-                                    if viewModel.particularity.count >= 2 {
-                                        DescriptionView(description: $viewModel.particularity[1])
-                                    }
-                                    Spacer()
-                                }
-                                
-                                if viewModel.particularity.count >= 3 {
-                                    HStack(spacing: 8) {
-                                        DescriptionView(description: $viewModel.particularity[2])
-                                        if viewModel.particularity.count == 4 {
-                                            DescriptionView(description: $viewModel.particularity[3])
-                                        }
-                                        Spacer()
-                                    }
-                                }
-                            }
-                                .padding(.horizontal, 16)
-                        }
-                        
-                        // About hotel
-                        Text(viewModel.hotelDescription)
-                            .font(Fonts.regular(size: 16).font)
-                            .padding(.horizontal, 16)
+                    AboutHotelView(title: $viewModel.aboutHotelTitle,
+                                   particularity: $viewModel.particularity,
+                                   description: $viewModel.hotelDescription)
+                    AboutHotelCategoriesView(categoryViewModels: $viewModel.hotelContentCategoryViewModels) { category in
+                        viewModel.handle(action: .contentCategory(category))
                     }
-                    .background(Color.white )
-                    .cornerRadius(12, corners: [.allCorners])
-                    
-                    
+                    .padding(.horizontal, 16)
                 }
-                
-                
+                .background(Color.white)
             }
         }
         .onAppear {
@@ -176,6 +138,17 @@ struct HotelView<TViewModel: HotelViewModelProtocol>: View where TViewModel.View
 }
 
 extension HotelView: DebugLoging {}
+
+private extension HotelView {
+    func createCategoryView(index: Int) throws -> CategoryView {
+        guard index < self.viewModel.hotelContentCategoryViewModels.count else {
+            fatalError("Out of range")
+        }
+        return CategoryView(imageName: $viewModel.hotelContentCategoryViewModels[index].imageName,
+                            title: $viewModel.hotelContentCategoryViewModels[index].title,
+                            description: $viewModel.hotelContentCategoryViewModels[index].title)
+    }
+}
 
 // MARK: - Preview
 struct HotelView_Previews: PreviewProvider {

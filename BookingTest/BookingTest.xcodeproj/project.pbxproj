@@ -44,6 +44,9 @@
 		5FDA16DC2AACAFB7003729BA /* DescriptionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FDA16DB2AACAFB7003729BA /* DescriptionView.swift */; };
 		5FDA16E02AAEE22C003729BA /* CategoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FDA16DF2AAEE22B003729BA /* CategoryView.swift */; };
 		5FDA16E52AAF02CD003729BA /* AboutHotelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FDA16E42AAF02CD003729BA /* AboutHotelView.swift */; };
+		5FDA16E82AAF09A7003729BA /* ListRowModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FDA16E72AAF09A7003729BA /* ListRowModifier.swift */; };
+		5FDA16EB2AAF102E003729BA /* HotelContentCategoryViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FDA16EA2AAF102E003729BA /* HotelContentCategoryViewModel.swift */; };
+		5FDA16ED2AAF1516003729BA /* AboutHotelCategoriesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FDA16EC2AAF1516003729BA /* AboutHotelCategoriesView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -81,6 +84,9 @@
 		5FDA16DB2AACAFB7003729BA /* DescriptionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DescriptionView.swift; sourceTree = "<group>"; };
 		5FDA16DF2AAEE22B003729BA /* CategoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryView.swift; sourceTree = "<group>"; };
 		5FDA16E42AAF02CD003729BA /* AboutHotelView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutHotelView.swift; sourceTree = "<group>"; };
+		5FDA16E72AAF09A7003729BA /* ListRowModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListRowModifier.swift; sourceTree = "<group>"; };
+		5FDA16EA2AAF102E003729BA /* HotelContentCategoryViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HotelContentCategoryViewModel.swift; sourceTree = "<group>"; };
+		5FDA16EC2AAF1516003729BA /* AboutHotelCategoriesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutHotelCategoriesView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -193,6 +199,8 @@
 		5FDA168D2AA858CC003729BA /* Shared */ = {
 			isa = PBXGroup;
 			children = (
+				5FDA16E92AAF100A003729BA /* ViewModels */,
+				5FDA16E62AAF098A003729BA /* Modifiers */,
 				5FDA16E32AAF0285003729BA /* Views */,
 				5FDA16CD2AA9E637003729BA /* UIComponents */,
 				5FDA16912AA85DF9003729BA /* Types */,
@@ -279,8 +287,25 @@
 			isa = PBXGroup;
 			children = (
 				5FDA16E42AAF02CD003729BA /* AboutHotelView.swift */,
+				5FDA16EC2AAF1516003729BA /* AboutHotelCategoriesView.swift */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		5FDA16E62AAF098A003729BA /* Modifiers */ = {
+			isa = PBXGroup;
+			children = (
+				5FDA16E72AAF09A7003729BA /* ListRowModifier.swift */,
+			);
+			path = Modifiers;
+			sourceTree = "<group>";
+		};
+		5FDA16E92AAF100A003729BA /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				5FDA16EA2AAF102E003729BA /* HotelContentCategoryViewModel.swift */,
+			);
+			path = ViewModels;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -384,14 +409,17 @@
 				5FDA16D12AAAE9E5003729BA /* AddressButtonView.swift in Sources */,
 				5FDA16C92AA8BE2A003729BA /* Bundle+appName.swift in Sources */,
 				5FDA16932AA85E12003729BA /* ViewEvent.swift in Sources */,
+				5FDA16ED2AAF1516003729BA /* AboutHotelCategoriesView.swift in Sources */,
 				5FDA16CB2AA9AD9B003729BA /* DebugLoging.swift in Sources */,
 				5FDA16952AA872DC003729BA /* HotelViewModel.swift in Sources */,
 				5FDA16852AA8455A003729BA /* HotelProvider.swift in Sources */,
 				5FDA16902AA858FA003729BA /* MessageRepresentable.swift in Sources */,
 				5FDA16C12AA896A5003729BA /* ImageViewModel.swift in Sources */,
+				5FDA16EB2AAF102E003729BA /* HotelContentCategoryViewModel.swift in Sources */,
 				5FC900862AA709EB002217F0 /* BookingTestApp.swift in Sources */,
 				5FDA16E02AAEE22C003729BA /* CategoryView.swift in Sources */,
 				5FDA16992AA87C8C003729BA /* ViewModelBaseBinding.swift in Sources */,
+				5FDA16E82AAF09A7003729BA /* ListRowModifier.swift in Sources */,
 				5FDA16C62AA8B3CE003729BA /* ImageSource.swift in Sources */,
 				5FDA16802AA83AA8003729BA /* HotelCoordinator.swift in Sources */,
 				5FDA168B2AA84E61003729BA /* API.swift in Sources */,
