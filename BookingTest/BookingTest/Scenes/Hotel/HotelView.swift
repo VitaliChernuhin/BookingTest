@@ -118,40 +118,55 @@ struct HotelView<TViewModel: HotelViewModelProtocol>: View where TViewModel.View
                 .background(Color.white)
                 .cornerRadius(12, corners: [.bottomLeft, .bottomRight])
                 
-                // Hotel description
-                VStack(spacing: 16) {
+                ScrollView {
                     
-                    HStack {
-                        Text("Об отеле")
-                        Spacer()
-                    }.padding(EdgeInsets(top: 16,
-                                         leading: 16,
-                                         bottom: 0,
-                                         trailing: 16))
-                    if !viewModel.particularity.isEmpty {
-                        VStack(spacing: 8) {
-                            HStack(spacing: 8) {
-                                DescriptionView(description: $viewModel.particularity[0])
-                                if viewModel.particularity.count >= 2 {
-                                    DescriptionView(description: $viewModel.particularity[1])
-                                }
-                                Spacer()
-                            }
-                            
-                            if viewModel.particularity.count >= 3 {
+                    // Hotel description
+                    VStack(spacing: 16) {
+                        
+                        // Title
+                        HStack {
+                            Text("Об отеле")
+                            Spacer()
+                        }.padding(EdgeInsets(top: 16,
+                                             leading: 16,
+                                             bottom: 0,
+                                             trailing: 16))
+                        // Hotel particularity
+                        if !viewModel.particularity.isEmpty {
+                            VStack(spacing: 8) {
                                 HStack(spacing: 8) {
-                                    DescriptionView(description: $viewModel.particularity[2])
-                                    if viewModel.particularity.count == 4 {
-                                        DescriptionView(description: $viewModel.particularity[3])
+                                    DescriptionView(description: $viewModel.particularity[0])
+                                    if viewModel.particularity.count >= 2 {
+                                        DescriptionView(description: $viewModel.particularity[1])
                                     }
                                     Spacer()
                                 }
+                                
+                                if viewModel.particularity.count >= 3 {
+                                    HStack(spacing: 8) {
+                                        DescriptionView(description: $viewModel.particularity[2])
+                                        if viewModel.particularity.count == 4 {
+                                            DescriptionView(description: $viewModel.particularity[3])
+                                        }
+                                        Spacer()
+                                    }
+                                }
                             }
+                                .padding(.horizontal, 16)
                         }
+                        
+                        // About hotel
+                        Text(viewModel.hotelDescription)
+                            .font(Fonts.regular(size: 16).font)
+                            .padding(.horizontal, 16)
                     }
+                    .background(Color.white )
+                    .cornerRadius(12, corners: [.allCorners])
+                    
+                    
                 }
-                .background(Color.white )
-                .cornerRadius(12, corners: [.allCorners])
+                
+                
             }
         }
         .onAppear {
