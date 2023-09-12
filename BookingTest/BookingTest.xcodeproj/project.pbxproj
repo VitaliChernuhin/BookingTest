@@ -50,6 +50,8 @@
 		5FDA16F62AAF3812003729BA /* SelectNumberViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FDA16F52AAF3812003729BA /* SelectNumberViewModel.swift */; };
 		5FE46A092AAF3FD300BA6BAC /* Room.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FE46A082AAF3FD300BA6BAC /* Room.swift */; };
 		5FE46A0B2AAF458600BA6BAC /* RoomsProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FE46A0A2AAF458600BA6BAC /* RoomsProvider.swift */; };
+		5FE46A0D2AB01FB800BA6BAC /* RoomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FE46A0C2AB01FB800BA6BAC /* RoomView.swift */; };
+		5FE46A0F2AB0234D00BA6BAC /* ParticularitiesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FE46A0E2AB0234D00BA6BAC /* ParticularitiesView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -94,6 +96,8 @@
 		5FDA16F52AAF3812003729BA /* SelectNumberViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectNumberViewModel.swift; sourceTree = "<group>"; };
 		5FE46A082AAF3FD300BA6BAC /* Room.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Room.swift; sourceTree = "<group>"; };
 		5FE46A0A2AAF458600BA6BAC /* RoomsProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoomsProvider.swift; sourceTree = "<group>"; };
+		5FE46A0C2AB01FB800BA6BAC /* RoomView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoomView.swift; sourceTree = "<group>"; };
+		5FE46A0E2AB0234D00BA6BAC /* ParticularitiesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParticularitiesView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -287,6 +291,8 @@
 				5FDA16DF2AAEE22B003729BA /* CategoryView.swift */,
 				5FDA16EE2AAF2CF8003729BA /* SelectView.swift */,
 				5FDA16F02AAF3536003729BA /* NavigationTitledView.swift */,
+				5FE46A0C2AB01FB800BA6BAC /* RoomView.swift */,
+				5FE46A0E2AB0234D00BA6BAC /* ParticularitiesView.swift */,
 			);
 			path = UIComponents;
 			sourceTree = "<group>";
@@ -426,6 +432,7 @@
 				5FDA16972AA873CF003729BA /* Bindable.swift in Sources */,
 				5FDA16E52AAF02CD003729BA /* AboutHotelView.swift in Sources */,
 				5FDA16CF2AA9E6A6003729BA /* RatingView.swift in Sources */,
+				5FE46A0F2AB0234D00BA6BAC /* ParticularitiesView.swift in Sources */,
 				5FDA169E2AA87DC8003729BA /* ViewEventHandling.swift in Sources */,
 				5FE46A092AAF3FD300BA6BAC /* Room.swift in Sources */,
 				5FDA16BF2AA891CA003729BA /* Fonts.swift in Sources */,
@@ -445,6 +452,7 @@
 				5FDA16C12AA896A5003729BA /* ImageViewModel.swift in Sources */,
 				5FDA16EB2AAF102E003729BA /* HotelContentCategoryViewModel.swift in Sources */,
 				5FC900862AA709EB002217F0 /* BookingTestApp.swift in Sources */,
+				5FE46A0D2AB01FB800BA6BAC /* RoomView.swift in Sources */,
 				5FDA16E02AAEE22C003729BA /* CategoryView.swift in Sources */,
 				5FDA16992AA87C8C003729BA /* ViewModelBaseBinding.swift in Sources */,
 				5FDA16E82AAF09A7003729BA /* ListRowModifier.swift in Sources */,

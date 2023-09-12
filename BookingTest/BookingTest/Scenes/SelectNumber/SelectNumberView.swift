@@ -17,7 +17,7 @@ struct SelectNumberView<TViewModel: SelectNumberViewModelProtocol>: View where T
     
     @ObservedObject private var viewModel: TViewModel
     
-    @State private var imageIndex: Int = 0
+    @Environment(\.presentationMode) private var presentationMode
     
     init(viewModel: TViewModel) {
         self.viewModel = viewModel
@@ -27,6 +27,7 @@ struct SelectNumberView<TViewModel: SelectNumberViewModelProtocol>: View where T
         VStack {
             NavigationTitledView(title: viewModel.hotelName) {
                 viewModel.handle(action: .back)
+                presentationMode.wrappedValue.dismiss()
             }
             
             Spacer()

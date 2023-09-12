@@ -26,28 +26,9 @@ struct AboutHotelView: View {
                                  trailing: 16))
             
             // Hotel particularity
-            if !particularity.isEmpty {
-                VStack(spacing: 8) {
-                    HStack(spacing: 8) {
-                        DescriptionView(description: $particularity[0])
-                        if $particularity.count >= 2 {
-                            DescriptionView(description: $particularity[1])
-                        }
-                        Spacer()
-                    }
-                    
-                    if $particularity.count >= 3 {
-                        HStack(spacing: 8) {
-                            DescriptionView(description: $particularity[2])
-                            if $particularity.count == 4 {
-                                DescriptionView(description: $particularity[3])
-                            }
-                            Spacer()
-                        }
-                    }
-                }
-                    .padding(.horizontal, 16)
-            }
+            ParticularitiesView(particularities: $particularity)
+                .padding(.horizontal, 16)
+            
             
             // About hotel
             HStack {
