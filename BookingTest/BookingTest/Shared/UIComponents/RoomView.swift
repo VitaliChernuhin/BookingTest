@@ -14,6 +14,11 @@ struct RoomView: View {
     @Binding var imageLocalPaths: [String]
     @Binding var name: String
     @Binding var particularities: [String]
+    @Binding var price: String
+    let roomDetailAction: () -> Void
+    let selectRoomAction: () -> Void
+    
+    @State private var selectRooomTitle = "Выбрать номер"
     
     @State private var imageIndex: Int = 0
     
@@ -57,8 +62,40 @@ struct RoomView: View {
             
             ParticularitiesView(particularities: $particularities)
             
+            HStack {
+                RoomDetailView()
+                    .onTapGesture {
+                        roomDetailAction()
+                }
+                Spacer()
+            }
             
-        }
+            HStack(spacing: 8) {
+                VStack {
+                    Spacer()
+                    Text(price)
+                        .font(Fonts.regular(size: 30).font)
+                }
+               
+                VStack {
+                    Spacer()
+                    Text("за 7 ночей с перелётом")
+                        .foregroundColor(Color("DescriptionForegroundColor"))
+                        .font(Fonts.regular(size: 18).font)
+                }
+                Spacer()
+            }
+            .frame(height: 36)
+            .padding(.top, 8)
+            
+            HStack {
+                SelectView(title: $selectRooomTitle)
+            }
+            .padding(.top, 8)
+            .onTapGesture {
+                selectRoomAction()
+            }
+        }.background(.white)
     }
 }
 
@@ -68,6 +105,7 @@ struct RoomView_Previews: PreviewProvider {
     @State static var imageLocalPaths: [String] = ["imagePlaceholder"]
     @State static var name = "Стандартный с видом на бассейн или сад"
     @State static var particularities = ["Все включено", "Кондиционер"]
+    @State static var price = "186 600 ₽"
     
     static var previews: some View {
         
@@ -76,7 +114,10 @@ struct RoomView_Previews: PreviewProvider {
             
             RoomView(imageLocalPaths: $imageLocalPaths,
                      name: $name,
-                     particularities: $particularities)
+                     particularities: $particularities,
+                     price: $price,
+                     roomDetailAction: {},
+                     selectRoomAction: {})
         }
     }
 }

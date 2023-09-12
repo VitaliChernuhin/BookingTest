@@ -53,6 +53,7 @@
 		5FE46A0D2AB01FB800BA6BAC /* RoomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FE46A0C2AB01FB800BA6BAC /* RoomView.swift */; };
 		5FE46A0F2AB0234D00BA6BAC /* ParticularitiesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FE46A0E2AB0234D00BA6BAC /* ParticularitiesView.swift */; };
 		5FE46A112AB0277200BA6BAC /* RoomDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FE46A102AB0277200BA6BAC /* RoomDetailView.swift */; };
+		5FE46A142AB030D300BA6BAC /* CurrencyFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FE46A132AB030D300BA6BAC /* CurrencyFormatter.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -100,6 +101,7 @@
 		5FE46A0C2AB01FB800BA6BAC /* RoomView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoomView.swift; sourceTree = "<group>"; };
 		5FE46A0E2AB0234D00BA6BAC /* ParticularitiesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParticularitiesView.swift; sourceTree = "<group>"; };
 		5FE46A102AB0277200BA6BAC /* RoomDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoomDetailView.swift; sourceTree = "<group>"; };
+		5FE46A132AB030D300BA6BAC /* CurrencyFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyFormatter.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -211,6 +213,7 @@
 		5FDA168D2AA858CC003729BA /* Shared */ = {
 			isa = PBXGroup;
 			children = (
+				5FE46A122AB030B300BA6BAC /* Helpers */,
 				5FDA16E92AAF100A003729BA /* ViewModels */,
 				5FDA16E62AAF098A003729BA /* Modifiers */,
 				5FDA16E32AAF0285003729BA /* Views */,
@@ -218,7 +221,6 @@
 				5FDA16912AA85DF9003729BA /* Types */,
 				5FDA168E2AA858DB003729BA /* Protocols */,
 				5FDA16C72AA8BE09003729BA /* Extensions */,
-				5FDA16BE2AA891CA003729BA /* Fonts.swift */,
 			);
 			path = Shared;
 			sourceTree = "<group>";
@@ -343,6 +345,15 @@
 			path = RoomsProvider;
 			sourceTree = "<group>";
 		};
+		5FE46A122AB030B300BA6BAC /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				5FDA16BE2AA891CA003729BA /* Fonts.swift */,
+				5FE46A132AB030D300BA6BAC /* CurrencyFormatter.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -434,6 +445,7 @@
 				5FDA16832AA844BA003729BA /* ServicesFactory.swift in Sources */,
 				5FDA16972AA873CF003729BA /* Bindable.swift in Sources */,
 				5FDA16E52AAF02CD003729BA /* AboutHotelView.swift in Sources */,
+				5FE46A142AB030D300BA6BAC /* CurrencyFormatter.swift in Sources */,
 				5FDA16CF2AA9E6A6003729BA /* RatingView.swift in Sources */,
 				5FE46A0F2AB0234D00BA6BAC /* ParticularitiesView.swift in Sources */,
 				5FDA169E2AA87DC8003729BA /* ViewEventHandling.swift in Sources */,

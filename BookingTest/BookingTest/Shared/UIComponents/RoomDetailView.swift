@@ -20,8 +20,6 @@ struct RoomDetailView: View {
         }
         .background(Color("RoomDetailBackground"))
         .cornerRadius(5, corners: .allCorners)
-        
-       
     }
 }
 

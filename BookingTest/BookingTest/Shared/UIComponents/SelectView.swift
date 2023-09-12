@@ -9,10 +9,11 @@ import SwiftUI
 
 struct SelectView: View {
     
+    @Binding var title: String
 
     var body: some View {
     
-        Text("К выбору номера")
+        Text(title)
             .font(Fonts.regular(size: 16).font)
             .foregroundColor(.white)
             .frame(maxWidth: .infinity,minHeight: 48)
@@ -22,8 +23,10 @@ struct SelectView: View {
 }
 
 struct SelectView_Previews: PreviewProvider {
+    
+    @State static var title = "К выбору отеля"
+    
     static var previews: some View {
-        
-        SelectView()
+        SelectView(title: $title)
     }
 }

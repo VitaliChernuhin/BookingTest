@@ -7,7 +7,6 @@
 
 import Foundation
 import Combine
-//import Stinsen
 import SwiftUI
 
 // MARK: HotelViewModelProtocol (protocol)
@@ -28,6 +27,8 @@ protocol HotelViewModelProtocol: ObservableObject, ViewEventHandling, ViewAction
     
     // Hotel content categories
     var hotelContentCategoryViewModels: [HotelContentCategoryViewModel] { get set }
+    
+    var selectTitle: String { get set }
 }
 
 // MARK: - HotelViewModel
@@ -85,6 +86,8 @@ final class HotelViewModel: ViewModelBaseBinding,
         
         return viewModels
     }()
+    
+    @Published var selectTitle: String = "К выбору отеля"
     
     // MARK: Life cycle
     init(hotelProvider: HotelProviding, imagesProvider: ImagesProviding) {
@@ -148,7 +151,7 @@ private extension HotelViewModel {
     }
     
     func configurePrice(price: Double) {
-        self.price = "От " + (self.numberFormatter.string(from: NSNumber(value: price)) ?? "")
+        self.price = "От " + CurrencyFormater.format(price)
     }
 }
 

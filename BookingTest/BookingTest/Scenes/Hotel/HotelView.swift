@@ -135,7 +135,7 @@ struct HotelView<TViewModel: HotelViewModelProtocol>: View where TViewModel.View
                             let viewModel = SelectNumberViewModel(hotelName: self.viewModel.hotelName, roomsProvider: ServicesFactory.shared.service(type: RoomsProviding.self), imagesProvider: ServicesFactory.shared.service(type: ImagesProviding.self))
                             SelectNumberView(viewModel: viewModel)
                         } label: {
-                            SelectView()
+                            SelectView(title: $viewModel.selectTitle)
                                 .padding(EdgeInsets(top: 12, leading: 16, bottom: 26, trailing: 16))
                         }
                     }
