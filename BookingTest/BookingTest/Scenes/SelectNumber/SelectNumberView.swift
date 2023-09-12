@@ -9,7 +9,7 @@ import SwiftUI
 
 // MARK: SelectNumberViewAction
 enum SelectNumberViewAction {
-    
+    case back
 }
 
 // MARK: - SelectNumberView
@@ -25,8 +25,13 @@ struct SelectNumberView<TViewModel: SelectNumberViewModelProtocol>: View where T
     
     var body: some View {
         VStack {
+            NavigationTitledView(title: viewModel.hotelName) {
+                viewModel.handle(action: .back)
+            }
             
+            Spacer()
         }
+        .navigationBarBackButtonHidden()
     }
 }
 
@@ -36,7 +41,7 @@ struct SelectNumberView_Previews: PreviewProvider {
     @State static var hotelName = "Название отеля"
     
     static var previews: some View {
-        let viewModel = SelectNumberViewModel(hotelName: hotelName)
+        let viewModel = SelectNumberViewModel(hotelName: hotelName, roomsProvider: ServicesFactory.shared.service(type: RoomsProviding.self), imagesProvider: ServicesFactory.shared.service(type: ImagesProviding.self))
         SelectNumberView(viewModel: viewModel)
     }
 }

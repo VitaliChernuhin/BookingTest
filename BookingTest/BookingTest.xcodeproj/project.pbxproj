@@ -10,14 +10,11 @@
 		5FC900862AA709EB002217F0 /* BookingTestApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FC900852AA709EB002217F0 /* BookingTestApp.swift */; };
 		5FC9008A2AA709ED002217F0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5FC900892AA709ED002217F0 /* Assets.xcassets */; };
 		5FC9008D2AA709ED002217F0 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5FC9008C2AA709ED002217F0 /* Preview Assets.xcassets */; };
-		5FC900952AA71521002217F0 /* Stinsen in Frameworks */ = {isa = PBXBuildFile; productRef = 5FC900942AA71521002217F0 /* Stinsen */; };
 		5FC900982AA7156E002217F0 /* ACarousel in Frameworks */ = {isa = PBXBuildFile; productRef = 5FC900972AA7156E002217F0 /* ACarousel */; };
 		5FC9009B2AA715A5002217F0 /* Swinject in Frameworks */ = {isa = PBXBuildFile; productRef = 5FC9009A2AA715A5002217F0 /* Swinject */; };
 		5FC9009E2AA715EB002217F0 /* CombineMoya in Frameworks */ = {isa = PBXBuildFile; productRef = 5FC9009D2AA715EB002217F0 /* CombineMoya */; };
 		5FC900A02AA715EB002217F0 /* Moya in Frameworks */ = {isa = PBXBuildFile; productRef = 5FC9009F2AA715EB002217F0 /* Moya */; };
-		5FDA16782AA832C3003729BA /* MainCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FDA16772AA832C3003729BA /* MainCoordinator.swift */; };
 		5FDA167E2AA83A83003729BA /* HotelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FDA167D2AA83A83003729BA /* HotelView.swift */; };
-		5FDA16802AA83AA8003729BA /* HotelCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FDA167F2AA83AA8003729BA /* HotelCoordinator.swift */; };
 		5FDA16832AA844BA003729BA /* ServicesFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FDA16822AA844BA003729BA /* ServicesFactory.swift */; };
 		5FDA16852AA8455A003729BA /* HotelProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FDA16842AA8455A003729BA /* HotelProvider.swift */; };
 		5FDA16892AA8458C003729BA /* Hotel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FDA16882AA8458C003729BA /* Hotel.swift */; };
@@ -47,7 +44,7 @@
 		5FDA16E82AAF09A7003729BA /* ListRowModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FDA16E72AAF09A7003729BA /* ListRowModifier.swift */; };
 		5FDA16EB2AAF102E003729BA /* HotelContentCategoryViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FDA16EA2AAF102E003729BA /* HotelContentCategoryViewModel.swift */; };
 		5FDA16ED2AAF1516003729BA /* AboutHotelCategoriesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FDA16EC2AAF1516003729BA /* AboutHotelCategoriesView.swift */; };
-		5FDA16EF2AAF2CF8003729BA /* SelectNumberButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FDA16EE2AAF2CF8003729BA /* SelectNumberButtonView.swift */; };
+		5FDA16EF2AAF2CF8003729BA /* SelectView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FDA16EE2AAF2CF8003729BA /* SelectView.swift */; };
 		5FDA16F12AAF3536003729BA /* NavigationTitledView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FDA16F02AAF3536003729BA /* NavigationTitledView.swift */; };
 		5FDA16F42AAF3800003729BA /* SelectNumberView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FDA16F32AAF3800003729BA /* SelectNumberView.swift */; };
 		5FDA16F62AAF3812003729BA /* SelectNumberViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FDA16F52AAF3812003729BA /* SelectNumberViewModel.swift */; };
@@ -60,9 +57,7 @@
 		5FC900852AA709EB002217F0 /* BookingTestApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookingTestApp.swift; sourceTree = "<group>"; };
 		5FC900892AA709ED002217F0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5FC9008C2AA709ED002217F0 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		5FDA16772AA832C3003729BA /* MainCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCoordinator.swift; sourceTree = "<group>"; };
 		5FDA167D2AA83A83003729BA /* HotelView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HotelView.swift; sourceTree = "<group>"; };
-		5FDA167F2AA83AA8003729BA /* HotelCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HotelCoordinator.swift; sourceTree = "<group>"; };
 		5FDA16822AA844BA003729BA /* ServicesFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServicesFactory.swift; sourceTree = "<group>"; };
 		5FDA16842AA8455A003729BA /* HotelProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HotelProvider.swift; sourceTree = "<group>"; };
 		5FDA16882AA8458C003729BA /* Hotel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Hotel.swift; sourceTree = "<group>"; };
@@ -93,7 +88,7 @@
 		5FDA16E72AAF09A7003729BA /* ListRowModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListRowModifier.swift; sourceTree = "<group>"; };
 		5FDA16EA2AAF102E003729BA /* HotelContentCategoryViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HotelContentCategoryViewModel.swift; sourceTree = "<group>"; };
 		5FDA16EC2AAF1516003729BA /* AboutHotelCategoriesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutHotelCategoriesView.swift; sourceTree = "<group>"; };
-		5FDA16EE2AAF2CF8003729BA /* SelectNumberButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectNumberButtonView.swift; sourceTree = "<group>"; };
+		5FDA16EE2AAF2CF8003729BA /* SelectView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectView.swift; sourceTree = "<group>"; };
 		5FDA16F02AAF3536003729BA /* NavigationTitledView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationTitledView.swift; sourceTree = "<group>"; };
 		5FDA16F32AAF3800003729BA /* SelectNumberView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectNumberView.swift; sourceTree = "<group>"; };
 		5FDA16F52AAF3812003729BA /* SelectNumberViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectNumberViewModel.swift; sourceTree = "<group>"; };
@@ -107,7 +102,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				5FC900982AA7156E002217F0 /* ACarousel in Frameworks */,
-				5FC900952AA71521002217F0 /* Stinsen in Frameworks */,
 				5FC9009E2AA715EB002217F0 /* CombineMoya in Frameworks */,
 				5FC900A02AA715EB002217F0 /* Moya in Frameworks */,
 				5FC9009B2AA715A5002217F0 /* Swinject in Frameworks */,
@@ -157,7 +151,6 @@
 			isa = PBXGroup;
 			children = (
 				5FC900852AA709EB002217F0 /* BookingTestApp.swift */,
-				5FDA16772AA832C3003729BA /* MainCoordinator.swift */,
 			);
 			path = Main;
 			sourceTree = "<group>";
@@ -167,7 +160,6 @@
 			children = (
 				5FDA167C2AA839AF003729BA /* Hotel */,
 				5FDA16F22AAF37EB003729BA /* SelectNumber */,
-				5FDA167F2AA83AA8003729BA /* HotelCoordinator.swift */,
 			);
 			path = Scenes;
 			sourceTree = "<group>";
@@ -293,7 +285,7 @@
 				5FDA16D42AAC5AD5003729BA /* RoundedCorner.swift */,
 				5FDA16DB2AACAFB7003729BA /* DescriptionView.swift */,
 				5FDA16DF2AAEE22B003729BA /* CategoryView.swift */,
-				5FDA16EE2AAF2CF8003729BA /* SelectNumberButtonView.swift */,
+				5FDA16EE2AAF2CF8003729BA /* SelectView.swift */,
 				5FDA16F02AAF3536003729BA /* NavigationTitledView.swift */,
 			);
 			path = UIComponents;
@@ -359,7 +351,6 @@
 			);
 			name = BookingTest;
 			packageProductDependencies = (
-				5FC900942AA71521002217F0 /* Stinsen */,
 				5FC900972AA7156E002217F0 /* ACarousel */,
 				5FC9009A2AA715A5002217F0 /* Swinject */,
 				5FC9009D2AA715EB002217F0 /* CombineMoya */,
@@ -394,7 +385,6 @@
 			);
 			mainGroup = 5FC900792AA709EB002217F0;
 			packageReferences = (
-				5FC900932AA71521002217F0 /* XCRemoteSwiftPackageReference "stinsen" */,
 				5FC900962AA7156E002217F0 /* XCRemoteSwiftPackageReference "ACarousel" */,
 				5FC900992AA715A5002217F0 /* XCRemoteSwiftPackageReference "Swinject" */,
 				5FC9009C2AA715EB002217F0 /* XCRemoteSwiftPackageReference "Moya" */,
@@ -434,7 +424,6 @@
 				5FDA16D72AAC5B06003729BA /* View+CornerRadius.swift in Sources */,
 				5FDA16832AA844BA003729BA /* ServicesFactory.swift in Sources */,
 				5FDA16972AA873CF003729BA /* Bindable.swift in Sources */,
-				5FDA16782AA832C3003729BA /* MainCoordinator.swift in Sources */,
 				5FDA16E52AAF02CD003729BA /* AboutHotelView.swift in Sources */,
 				5FDA16CF2AA9E6A6003729BA /* RatingView.swift in Sources */,
 				5FDA169E2AA87DC8003729BA /* ViewEventHandling.swift in Sources */,
@@ -445,7 +434,7 @@
 				5FDA16D12AAAE9E5003729BA /* AddressButtonView.swift in Sources */,
 				5FDA16C92AA8BE2A003729BA /* Bundle+appName.swift in Sources */,
 				5FDA16932AA85E12003729BA /* ViewEvent.swift in Sources */,
-				5FDA16EF2AAF2CF8003729BA /* SelectNumberButtonView.swift in Sources */,
+				5FDA16EF2AAF2CF8003729BA /* SelectView.swift in Sources */,
 				5FDA16ED2AAF1516003729BA /* AboutHotelCategoriesView.swift in Sources */,
 				5FE46A0B2AAF458600BA6BAC /* RoomsProvider.swift in Sources */,
 				5FDA16CB2AA9AD9B003729BA /* DebugLoging.swift in Sources */,
@@ -461,7 +450,6 @@
 				5FDA16E82AAF09A7003729BA /* ListRowModifier.swift in Sources */,
 				5FDA16C62AA8B3CE003729BA /* ImageSource.swift in Sources */,
 				5FDA16F42AAF3800003729BA /* SelectNumberView.swift in Sources */,
-				5FDA16802AA83AA8003729BA /* HotelCoordinator.swift in Sources */,
 				5FDA168B2AA84E61003729BA /* API.swift in Sources */,
 				5FDA16892AA8458C003729BA /* Hotel.swift in Sources */,
 			);
@@ -666,14 +654,6 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		5FC900932AA71521002217F0 /* XCRemoteSwiftPackageReference "stinsen" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/rundfunk47/stinsen";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 2.0.0;
-			};
-		};
 		5FC900962AA7156E002217F0 /* XCRemoteSwiftPackageReference "ACarousel" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/JWAutumn/ACarousel";
@@ -701,11 +681,6 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		5FC900942AA71521002217F0 /* Stinsen */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 5FC900932AA71521002217F0 /* XCRemoteSwiftPackageReference "stinsen" */;
-			productName = Stinsen;
-		};
 		5FC900972AA7156E002217F0 /* ACarousel */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 5FC900962AA7156E002217F0 /* XCRemoteSwiftPackageReference "ACarousel" */;

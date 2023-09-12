@@ -9,7 +9,6 @@ import SwiftUI
 import Combine
 import ACarousel
 
-
 // MARK: HotelViewAction
 enum HotelViewAction {
     case address
@@ -51,112 +50,107 @@ struct HotelView<TViewModel: HotelViewModelProtocol>: View where TViewModel.View
             }
         }()
             
-        return ZStack {
-            
-            Color("GrayBackgroundColor")
-            
-            VStack(spacing: 8) {
+        return NavigationView {
+            ZStack {
                 
-                // Common hotel info
-                VStack(spacing: 16) {
+                Color("GrayBackgroundColor")
+                
+                VStack(spacing: 8) {
                     
-                    // Title
-                    HStack {
-                        Text("Отель")
-                            .font(Fonts.regular(size: 19).font)
-                    }
-                    
-                    // Image carousel
-                    ACarousel(imageViewModels,
-                              index: $imageIndex,
-                              spacing: 0,
-                              headspace: 0) { imageVewModel in
-                        imageVewModel.image
-                            .resizable()
-                            .scaledToFill()
-                    }
-                    .frame(height: 257)
-                    .cornerRadius(15)
-                    
-                    VStack(spacing: 8) {
+                    // Common hotel info
+                    VStack(spacing: 16) {
                         
-                        // Rate
+                        // Title
                         HStack {
-                            RatingView(rate: $viewModel.rate)
-                            Spacer( )
+                            Text("Отель")
+                                .font(Fonts.regular(size: 19).font)
                         }
                         
-                        // Hotel name
-                        HStack {
-                            Text(viewModel.hotelName)
-                                .font(Fonts.regular(size: 22).font)
-                            Spacer()
+                        // Image carousel
+                        ACarousel(imageViewModels,
+                                  index: $imageIndex,
+                                  spacing: 0,
+                                  headspace: 0) { imageVewModel in
+                            imageVewModel.image
+                                .resizable()
+                                .scaledToFill()
                         }
+                        .frame(height: 257)
+                        .cornerRadius(15)
                         
-                        // Hotel address
-                        HStack {
-                            AddressButtonView(adress: $viewModel.hotelAddress, action: {
-                                viewModel.handle(action: .address)
-                            })
-                            Spacer()
-                        }
-                        
-                        // Hotel price
-                        HStack(spacing: 8) {
-                            Text(viewModel.price)
-                                .font(Fonts.regular(size: 30).font)
-                            VStack {
-                                Spacer()
-                                Text(viewModel.priceDescription)
-                                    .font(Fonts.regular(size: 16).font)
-                                    .foregroundColor(Color("DescriptionForegroundColor"))
+                        VStack(spacing: 8) {
+                            
+                            // Rate
+                            HStack {
+                                RatingView(rate: $viewModel.rate)
+                                Spacer( )
                             }
-                            Spacer()
-                        }.frame(height: 28)
-                    }
-                    .padding(.bottom, 16)
-                }
-                .padding(.horizontal, 16)
-                .background(Color.white)
-                .cornerRadius(12, corners: [.bottomLeft, .bottomRight])
-                
-                ScrollView {
-                    AboutHotelView(title: $viewModel.aboutHotelTitle,
-                                   particularity: $viewModel.particularity,
-                                   description: $viewModel.hotelDescription)
-                    AboutHotelCategoriesView(categoryViewModels: $viewModel.hotelContentCategoryViewModels) { category in
-                        viewModel.handle(action: .contentCategory(category))
+                            
+                            // Hotel name
+                            HStack {
+                                Text(viewModel.hotelName)
+                                    .font(Fonts.regular(size: 22).font)
+                                Spacer()
+                            }
+                            
+                            // Hotel address
+                            HStack {
+                                AddressButtonView(adress: $viewModel.hotelAddress, action: {
+                                    viewModel.handle(action: .address)
+                                })
+                                Spacer()
+                            }
+                            
+                            // Hotel price
+                            HStack(spacing: 8) {
+                                Text(viewModel.price)
+                                    .font(Fonts.regular(size: 30).font)
+                                VStack {
+                                    Spacer()
+                                    Text(viewModel.priceDescription)
+                                        .font(Fonts.regular(size: 16).font)
+                                        .foregroundColor(Color("DescriptionForegroundColor"))
+                                }
+                                Spacer()
+                            }.frame(height: 28)
+                        }
+                        .padding(.bottom, 16)
                     }
                     .padding(.horizontal, 16)
-                    .padding(.bottom, 12)
+                    .background(Color.white)
+                    .cornerRadius(12, corners: [.bottomLeft, .bottomRight])
                     
-                    SelectNumberButtonView {
-                        viewModel.handle(action: .selectNumber)
+                    ScrollView {
+                        AboutHotelView(title: $viewModel.aboutHotelTitle,
+                                       particularity: $viewModel.particularity,
+                                       description: $viewModel.hotelDescription)
+                        AboutHotelCategoriesView(categoryViewModels: $viewModel.hotelContentCategoryViewModels) { category in
+                            viewModel.handle(action: .contentCategory(category))
+                        }
+                        .padding(.horizontal, 16)
+                        .padding(.bottom, 12)
+                        
+                        
+                        NavigationLink {
+                            let viewModel = SelectNumberViewModel(hotelName: self.viewModel.hotelName, roomsProvider: ServicesFactory.shared.service(type: RoomsProviding.self), imagesProvider: ServicesFactory.shared.service(type: ImagesProviding.self))
+                            SelectNumberView(viewModel: viewModel)
+                        } label: {
+                            SelectView()
+                                .padding(EdgeInsets(top: 12, leading: 16, bottom: 26, trailing: 16))
+                        }
                     }
-                    .padding(EdgeInsets(top: 12, leading: 16, bottom: 26, trailing: 16))
+                    .background(Color.white)
+                    .cornerRadius(12, corners: .allCorners)
                 }
-                .background(Color.white)
-                .cornerRadius(12, corners: .allCorners)
             }
-        }
-        .onAppear {
-            viewModel.handle(event: .onAppear)
+            .onAppear {
+                viewModel.handle(event: .onAppear)
+            }
         }
     }
 }
 
 extension HotelView: DebugLoging {}
-
-private extension HotelView {
-    func createCategoryView(index: Int) throws -> CategoryView {
-        guard index < self.viewModel.hotelContentCategoryViewModels.count else {
-            fatalError("Out of range")
-        }
-        return CategoryView(imageName: $viewModel.hotelContentCategoryViewModels[index].imageName,
-                            title: $viewModel.hotelContentCategoryViewModels[index].title,
-                            description: $viewModel.hotelContentCategoryViewModels[index].title)
-    }
-}
 
 // MARK: - Preview
 struct HotelView_Previews: PreviewProvider {

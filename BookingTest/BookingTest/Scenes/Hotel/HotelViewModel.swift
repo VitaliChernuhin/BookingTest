@@ -7,7 +7,8 @@
 
 import Foundation
 import Combine
-import Stinsen
+//import Stinsen
+import SwiftUI
 
 // MARK: HotelViewModelProtocol (protocol)
 protocol HotelViewModelProtocol: ObservableObject, ViewEventHandling, ViewActionHandling {
@@ -38,6 +39,9 @@ final class HotelViewModel: ViewModelBaseBinding,
     // Services
     private let hotelProvider: HotelProviding
     private let imagesProvider: ImagesProviding
+    
+    // Route
+//    @RouterObject private var router: NavigationRouter<HotelCoordinator>!
     
     private var numberFormatter: NumberFormatter = {
         let numberFormatter = NumberFormatter()
@@ -169,3 +173,4 @@ extension HotelViewModel {
         
     }
 }
+

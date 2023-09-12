@@ -11,7 +11,8 @@ import SwiftUI
 struct BookingTestApp: App {
     var body: some Scene {
         WindowGroup {
-            MainCoordinator().view()
+            HotelView(viewModel: HotelViewModel(hotelProvider: ServicesFactory.shared.service(type: HotelProviding.self),
+                                                imagesProvider: ServicesFactory.shared.service(type: ImagesProviding.self)))
         }
     }
 }

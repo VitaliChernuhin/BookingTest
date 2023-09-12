@@ -22,6 +22,8 @@ final class SelectNumberViewModel: ViewModelBaseBinding,
     // MARK: Private properties
     
     // Services
+    private let roomsProvider: RoomsProviding
+    private let imagesProvider: ImagesProviding
     
     // MARK: Public properties
     
@@ -30,8 +32,12 @@ final class SelectNumberViewModel: ViewModelBaseBinding,
     
     @Published var hotelName: String = ""
     
-    init(hotelName: String) {
+    init(hotelName: String,
+         roomsProvider: RoomsProviding,
+         imagesProvider: ImagesProviding) {
         self.hotelName = hotelName
+        self.roomsProvider = roomsProvider
+        self.imagesProvider = imagesProvider
     }
 }
 
@@ -46,7 +52,8 @@ extension SelectNumberViewModel: Bindable {
 extension SelectNumberViewModel: ViewActionHandling {
     func handle(action: SelectNumberViewAction) {
         switch action {
-            
+        case .back:
+            break
         }
     }
 }

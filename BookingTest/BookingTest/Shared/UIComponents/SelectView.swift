@@ -7,12 +7,12 @@
 
 import SwiftUI
 
-struct SelectNumberButtonView: View {
+struct SelectView: View {
     
-    let action: () -> Void
-    
+
     var body: some View {
-        Button("К выбору номера", action: action)
+    
+        Text("К выбору номера")
             .font(Fonts.regular(size: 16).font)
             .foregroundColor(.white)
             .frame(maxWidth: .infinity,minHeight: 48)
@@ -21,11 +21,9 @@ struct SelectNumberButtonView: View {
     }
 }
 
-struct SelectNumberButtonView_Previews: PreviewProvider {
+struct SelectView_Previews: PreviewProvider {
     static var previews: some View {
         
-        SelectNumberButtonView(action: {
-            
-        })
+        SelectView()
     }
 }
