@@ -52,6 +52,7 @@
 		5FE46A0B2AAF458600BA6BAC /* RoomsProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FE46A0A2AAF458600BA6BAC /* RoomsProvider.swift */; };
 		5FE46A0D2AB01FB800BA6BAC /* RoomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FE46A0C2AB01FB800BA6BAC /* RoomView.swift */; };
 		5FE46A0F2AB0234D00BA6BAC /* ParticularitiesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FE46A0E2AB0234D00BA6BAC /* ParticularitiesView.swift */; };
+		5FE46A112AB0277200BA6BAC /* RoomDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FE46A102AB0277200BA6BAC /* RoomDetailView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -98,6 +99,7 @@
 		5FE46A0A2AAF458600BA6BAC /* RoomsProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoomsProvider.swift; sourceTree = "<group>"; };
 		5FE46A0C2AB01FB800BA6BAC /* RoomView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoomView.swift; sourceTree = "<group>"; };
 		5FE46A0E2AB0234D00BA6BAC /* ParticularitiesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParticularitiesView.swift; sourceTree = "<group>"; };
+		5FE46A102AB0277200BA6BAC /* RoomDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoomDetailView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -293,6 +295,7 @@
 				5FDA16F02AAF3536003729BA /* NavigationTitledView.swift */,
 				5FE46A0C2AB01FB800BA6BAC /* RoomView.swift */,
 				5FE46A0E2AB0234D00BA6BAC /* ParticularitiesView.swift */,
+				5FE46A102AB0277200BA6BAC /* RoomDetailView.swift */,
 			);
 			path = UIComponents;
 			sourceTree = "<group>";
@@ -440,6 +443,7 @@
 				5FDA16F12AAF3536003729BA /* NavigationTitledView.swift in Sources */,
 				5FDA16D12AAAE9E5003729BA /* AddressButtonView.swift in Sources */,
 				5FDA16C92AA8BE2A003729BA /* Bundle+appName.swift in Sources */,
+				5FE46A112AB0277200BA6BAC /* RoomDetailView.swift in Sources */,
 				5FDA16932AA85E12003729BA /* ViewEvent.swift in Sources */,
 				5FDA16EF2AAF2CF8003729BA /* SelectView.swift in Sources */,
 				5FDA16ED2AAF1516003729BA /* AboutHotelCategoriesView.swift in Sources */,
